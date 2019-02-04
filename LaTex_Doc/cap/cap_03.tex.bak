@@ -1,0 +1,148 @@
+%%prototipo experimental
+
+\chapter{DISEÑO Y DESARROLLO DEL PROTOTIPO EXPERIMENTAL}
+\bigskip
+
+Se diseñó un exoesqueleto capaz de soportar el peso de una persona
+de 75 kg. Para la construcci\'{o}n del dispositivo se trabajo sobre
+un aparato largo mixto con socket cuadrilateral que consta de un
+aparato terminal tobillo-pie con apoyo en c\'{o}ndilos femorales. El
+material de la carcasa es polipropileno con barras de duraluminio
+laterales y mediales y articulaci\'{o}n de rodilla libre, el aparato
+completo mide 83cm de largo, 47cm de la parte alta de la pierna y
+36cm de la parte baja. Esta instrumentado con actuadores tipo SEA
+como se observa en la figura \ref{fig:actuador_separado}. Estos
+actuadores mec\'{a}nicos amplifican la fuerza de la pierna. El
+exoesqueleto est\'{a} instrumentado tambi\'{e}n con dos encoders
+\'{o}pticos que sensan la posici\'{o}n angular de las articulaciones
+y generan el vector de posici\'{o}n $q$ y dos gir\'{o}scopos que
+sensan la velocidad angular en las articulaciones que generan el
+vector de velocidad angular $\dot{q}$. Adem\'{a}s contiene dos
+sensores que estiman las fuerzas producidas por el humano $f_{h1}$ y
+$f_{h2}$ que se utilizan posteriormente para generar el vector de
+posici\'{o}n deseada $q_{d}$, observe la figura \ref{fig:actuador}.
+Los resortes con constantes $k_{s}$ se ubican a una distancia
+$d_{i}$ de la articulaci\'{o}n, y est\'{a}n colocados de tal forma
+que se deforman cuando el humano aplica una fuerza $f_{h}$ al
+extremo del actuador, esta elongaci\'{o}n se mide por un sensor de
+posici\'{o}n lineal y se utiliza para estimar la fuerza aplicada por
+el usuario. La magnitud de la fuerza produce un desplazamiento
+angular en la articulaci\'{o}n $(q_{d}-q)$. De esta manera
+utilizando la ley de Hooke para un desplazamiento angular
+($df_{h}=Ks(q_{d}-q)$), obtenemos la relaci\'{o}n que existe entre
+posici\'{o}n angular deseada y la fuerza aplicada por el humano como
+se ve en las siguientes ecuaciones:
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.40]{imagenes/actuador.pdf}
+\caption{a) Modelo mec\'{a}nico del actuador para la rodilla,
+b)Modelo mec\'{a}nico del actuador para la rodilla desacoplado en
+las dos partes principales que lo conforman.}
+\label{fig:actuador_separado}
+\end{figure}
+
+\begin{equation}
+\label{qd2} q_{d2}=\frac{f_{h2}d_{2}\cos(\beta)}{k_{s2}}+q_{2}
+\end{equation}
+
+\begin{equation}
+\label{qd1}
+ q_{d1}=\frac{f_{h1}d_{1}}{k_{s1}}+q_{1}
+\end{equation}
+
+\bigskip
+
+Observe que la estructura  del sensor contiene dos resortes debido a
+que est\'{a} diseñada para poder sensar la magnitud y la
+direcci\'{o}n de la fuerza humana $f_{h}$. El sentido en que se
+aplique la fuerza indica si el usuario desea extender o comprimir la
+articulaci\'{o}n. De las ecuaciones (\ref{qd1}) y (\ref{qd2}) es
+f\'{a}cil notar tres casos. i) si $f_{h}=0$ entonces $q_{d}=q$ es
+decir que no se pretende mover la articulaci\'{o}n. ii) Si $f_{h}>0$
+entonces $q_{d}>q$  que se traduce en la intenci\'{o}n de extender
+la articulaci\'{o}n. iii) Si $f_{h}<0$ entonces $q_{d}<q$ que
+equivale a la intenci\'{o}n del usuario de flexionar la
+articulaci\'{o}n.
+
+\begin{table}[htbp]
+  \centering \caption{Parámetros Físicos del Exoesqueleto}
+   \label{extremos45}
+  %%\begin{tabular*}{\hsize}{lrrrrr}
+  \begin{tabular}{lcccccc}   \hline
+\hline
+   Par\'{a}metro & Cantidad & Unidades  \\
+    \hline
+
+$l_{1}$& 0.3683 &  $m$ \\
+$l_{2}$& 0.3887 &  $m$ \\
+$l_{4}$& 0.1365 &  $m$ \\
+$l_{c1}$& 0.1958 &  $m$ \\
+$l_{c2}$& 0.2072 &  $m$ \\
+$l_{c3}$& 0.2103 &  $m$ \\
+$d_{1}$& 0.0384 &  $m$ \\
+$d_{2}$& 0.2176 &  $m$ \\
+ \hline
+$m_{1}$& 3.4875 & $kg$   \\
+$m_{2}$& 7.5 &   $kg$   \\
+$m_{3}$& 25.425 & $kg$  \\
+$I_{1}$ & 0.25 & $kg*mm^{2}$   \\
+$I_{2}$ & 0.69 & $kg*mm^{2}$   \\
+\hline
+$k_{s1}$& 173.8745 & N / m   \\
+$k_{s2}$& 181.0046 & N / m   \\
+
+\hline
+\end{tabular}
+\end{table}
+
+La transmisi\'{o}n mec\'{a}nica consiste en un arreglo de
+transmisi\'{o}n por husillo de bolas. Se dise\~{n}aron dos
+actuadores para acoplarse a la rodilla y al tobillo.  En la parte
+superior de cada actuador se acoplo un motor de 12 volts con un
+torque m\'{a}ximo de 5Nm (actua--dor de la rodilla) y 1.8Nm(actuador
+del tobillo), estos motores est\'{a}n acoplados a un tornillo sin
+fin con paso de $0.03048$m en la rodilla y $0.00508$m en el tobillo
+el cual al girar desplaza a la tuerca a bolas realizando el
+desplazamiento del actuador expandi\'{e}ndolo o comprimi\'{e}ndolo
+dependiendo de la direcci\'{o}n en la que gire el motor. La
+siguiente ecuaci\'{o}n expresa la transmisi\'{o}n mec\'{a}nica en un
+sistema de husillo de bolas.
+
+\begin{equation}
+\label{transmision} T=\frac{1}{2\pi}P(F+\mu W_{g})\qquad\lbrack Nm]
+\end{equation}
+
+Donde $T$ es el torque del motor, $F$ es la fuerza que genera la
+transmisi\'{o}n, $W_{g}$ es la masa que se desplaza, $\mu$ es el
+coeficiente de fricci\'{o}n en el husillo (aprox. 0.05 a 0.2) y $P$
+es el paso del tornillo sin fin.
+\bigskip
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.20]{imagenes/sensor_fuerza.pdf}
+\caption{Sensor para estimación de la fuerza humana $f_{h}$.}
+\label{fig:actuador}
+\end{figure}
+\bigskip
+
+
+La parte electr\'{o}nica del exoesqueleto esta conformada
+principalmente por un microcontrolador rabbit 3400 que se utiliza
+como cerebro del sistema, \'{e}ste procesa las señales de entrada
+que provienen de un sensor  de posici\'{o}n lineal MLT 0R5N0750 F5C,
+un enconder \'{o}ptico 600EN-128-CBL que mide la posici\'{o}n
+angular y un gir\'{o}scopo LPR510AL que mide la velocidad angular.
+Cada articulaci\'{o}n utiliza estos 3 sensores. La señal de salida
+generada es de tipo PWM y se amplifica por medio de un Driver MD03
+que proporciona la cantidad de voltaje suficiente para operar a los
+motores de los actuadores. En la figura \ref{fig:diagrama} se
+observa en un diagrama de la instrumentaci\'{o}n del exoesqueleto.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.55]{imagenes/diagrama.pdf}
+\caption{Diagrama a bloques de los componentes del prototipo.}
+\label{fig:diagrama}
+\end{figure}

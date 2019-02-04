@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla para tesis por David Luna se encuentra bajo una Licencia
+% Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported.
+% http://creativecommons.org/licenses/by-nc-sa/3.0/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addcontentsline{toc}{chapter}{RESUMEN}
+\begin{center}
+\textbf{\large RESUMEN}
+\end{center}
+
+\vspace{5cm}
+
+Los exoesqueletos son robots acoplados a las extremidades del cuerpo
+humano enfocados en el incremento de su fuerza, velocidad y
+rendimiento principalmente. Las principales aplicaciones son en la
+milicia, en la industria y en la medicina. El exoesqueleto se puede
+utilizar para la rehabilitación de las extremidades inferiores. En este trabajo se presenta un
+exoesqueleto de dos grados de libertad que se utiliza para realizar
+ejercicio activos y pasivos de rehabilitación.
+El diseño y fabricación del exoesqueleto está basado en la
+instrumentación de una ortesis del miembro inferior derecho. El
+exoesqueleto utiliza sensores que estiman la fuerza producida por el
+humano incorporados en los actuadores de tipo SEA
+(Actuadores Elásticos Seriales) que se utilizan para amplificar la
+fuerza humana. Además mediante sensores se estima la posición y
+velocidad angular de las articulaciones, que se utilizan para
+controlar el movimiento de la pierna. Se presenta un estudio del
+modelo dinámico del exoesqueleto y de los actuadores, el diseño y
+fabricación del prototipo experimental. Los
+resultados de simulaciones muestran una comparación entre tres leyes de control (PD con compensación de la gravedad, PD con
+compensación adaptable y modos deslizantes). Los resultados
+experimentales muestran que existe una amplificación de la fuerza
+generada por el portador y amplificada por la mecánica del
+exoesqueleto, ofreciendo una disminución en el esfuerzo del usuario
+para mantenerse de pie y realizar ejercicios de rehabilitación con
+movimientos de flexión y extensión de las articulaciones (Rodilla y
+Tobillo).

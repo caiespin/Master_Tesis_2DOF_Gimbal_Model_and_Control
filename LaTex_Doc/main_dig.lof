@@ -1,0 +1,47 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Definici\'{o}n de la L\'{i}nea de Vista\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Partes principales de un sistema de c\'{a}mara Pan-Tilt\relax }}{9}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Clasificaci\'{o}n de gimbals aerotransportados\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de enlace de integraci\'{o}n gimbal-VANT\relax }}{12}{figure.caption.7}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Marcos de referencia del sistema gimbal\relax }}{18}{figure.caption.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Configuraci\'{o}n para el lazo de control de estabilizaci\'{o}n directa\relax }}{36}{figure.caption.9}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Simulation Block Diagram\relax }}{43}{figure.caption.10}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Perturbaciones de la Base\relax }}{45}{figure.caption.14}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Reducci\'{o}n del Efecto Chattering\relax }}{46}{figure.caption.15}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Acci\'{o}n de Control del Algoritmo de Modos Deslizantes vs Compensador PI\relax }}{47}{figure.caption.16}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Se\~{a}l de Control del Algoritmo de Modos Deslizantes vs Compensador PI\relax }}{48}{figure.caption.17}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Respuesta del Sistema al Aplicarse el Algoritmo de Estabilizaci\'{o}n\relax }}{49}{figure.caption.18}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Modelo 3D del Prototipo de C\'{a}mara Giroestablizada\relax }}{52}{figure.caption.19}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Vistas del Modelo 3D del Prototipo de C\'{a}mara Giroestablizada\relax }}{53}{figure.caption.20}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Prototipo Terminado\relax }}{54}{figure.caption.21}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Tarjetas Principales de Control del Sistema Montadas en el Banco de Pruebas\relax }}{55}{figure.caption.22}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces SONY\textsuperscript {\textregistered } FCB-H11\relax }}{58}{figure.caption.23}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Central Inercial VectorNav\textsuperscript {\textregistered }\relax }}{60}{figure.caption.25}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Ejemplo del Protocolo de Comunicaci\'{o}n del VN-100\relax }}{62}{figure.caption.26}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces FAULHABER\textsuperscript {\textregistered } 1524T012SR\relax }}{62}{figure.caption.27}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Arreglo Moto-reductor - Motor - Encoder usado en el Sistema\relax }}{64}{figure.caption.30}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces L\'{i}mite Tilt\relax }}{65}{figure.caption.31}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Diagrama Esquem\'{a}tico \relax }}{66}{figure.caption.32}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Dise\~{n}o del Circuito Impreso\relax }}{67}{figure.caption.33}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Sensor de l\'{i}mite dise\~{n}ado\relax }}{67}{figure.caption.34}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Posici\'{o}n inicial "Home"\relax }}{68}{figure.caption.35}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Dise\~{n}o del Circuito Impreso del Sensor de Pan\relax }}{68}{figure.caption.36}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Sensor de l\'{i}mite Dise\~{n}ado Montado en el Prototipo\relax }}{69}{figure.caption.37}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Detalle de la Estructura de la Base y Montaje del Gimbal\relax }}{70}{figure.caption.38}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Detalle de la Estructura del Eslab\'{o}n Externo (Pan)\relax }}{71}{figure.caption.39}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Detalle de la Estructura del Eslab\'{o}n Interno (Tilt)\relax }}{71}{figure.caption.40}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Diagrama de Bloques del Programa del Algoritmo de Estabilizaci\'{o}n\relax }}{73}{figure.caption.41}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Pruebas Experimentales\relax }}{78}{figure.caption.42}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Resultados de la Estabilizaci\'{o}n Proporcional-Integral\relax }}{79}{figure.caption.43}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Resultados de la Estabilizaci\'{o}n Proporcional-Integral\relax }}{80}{figure.caption.44}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Resultados de la Estabilizaci\'{o}n por Modos deslizantes\relax }}{81}{figure.caption.45}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Resultados de la Estabilizaci\'{o}n por Modos deslizantes\relax }}{82}{figure.caption.46}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

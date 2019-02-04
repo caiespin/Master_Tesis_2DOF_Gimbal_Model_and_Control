@@ -1,0 +1,419 @@
+%%%simulacion
+\chapter{RESULTADOS}
+
+
+
+\section{Control PD con compensación de la gravedad}
+
+\subsection{Resultados numéricos}
+
+
+Esta sección muestra los resultados numéricos del ejercicio activo de rehabilitación.
+Para verificar el desempeño del control se utilizó una
+simulaci\'{o}n de los movimientos de las articulaciones que se
+generan al realizar una flexi\'{o}n (disminuci\'{o}n en el
+\'{a}ngulo de la articulaci\'{o}n) y una extensi\'{o}n (aumento en
+el \'{a}ngulo de la articulación) observe la figura \ref{fig:bloq}.
+Los rangos de movimiento en las articulaciones son aproximadamente
+de $35^{\circ}$ en el tobillo y de $80^{\circ}$ en la rodilla. Para
+simular la trayectoria que recorren las articulaciones  en el
+ejercicio, se generaron dos trayectorias deseadas por medio de
+funciones cosenoidales. En la experimentaci\'{o}n, las trayectorias
+deseadas se generan intuitivamente y se transmiten al control por
+medio de los sensores de fuerzas en la pierna inferior y superior
+como señales de referencia.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.30]{imagenes/positions.pdf}
+\caption{Ejercicio de flexión de piernas hasta llegar a
+$q_{1}=55^{\circ},q_{2}=110^{\circ}$.} \label{fig:bloq}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.65]{imagenes/grafica_salida_es.pdf}
+\caption{Comparaci\'{o}n entre posici\'{o}n angular deseada y
+posici\'{o}n angular de la arti-culaci\'{o}n del tobillo y la rodilla
+en simulaci\'{o}n.} \label{fig:salidas}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.7]{imagenes/gravedad_tob_rodilla.pdf}
+\caption{Par gravitacional total y Torque Producido con fuerza
+humana humano para distintos valores de $kg_{i}$.}
+\label{fig:simu_tob_rod}
+\end{figure}
+
+La simulaci\'{o}n permite ajustar las ganancias del control y nos de
+una aproximaci\'{o}n para ajustar el control en el prototipo
+experimental. Los resultados de la simulaci\'{o}n se pueden observar
+en la figura \ref{fig:salidas} para el tobillo en la parte superior
+y para la rodilla en la parte inferior donde se observa que la
+salida o posiciones de las articulaciones siguen la trayectoria
+deseada en un tiempo de respuesta corto sin sobretiros considerables
+que afectar\'{i}an las articulaciones del humano.
+
+
+
+En las gr\'{a}ficas de la figura \ref{fig:simu_tob_rod} se presenta
+el valor del termino gravitacional total $G_{i}$ en l\'{i}neas
+punteadas y los torques generados con fuerza humana $\tau_{hi}$ para
+algunos diferentes valores de $kg_{i}$. A medida que el valor de
+$kg_{i}$ aumenta el torque generado por el exoesqueleto que compensa
+la gravedad tambi\'{e}n aumenta y esto se refleja en una
+disminuci\'{o}n del esfuerzo humano. La tabla (\ref{extremos45})
+muestra los par\'{a}metros utilizados en la simulaci\'{o}n del
+modelo din\'{a}mico del exoesqueleto. Los par\'{a}metros se obtienen
+por medio de mediciones en el mecanismo y datos antropom\'{e}tricos
+\cite{hutson} para una persona de 75 kg.
+
+
+
+
+
+
+\subsection{Resultados Experimentales}
+
+Esta sección muestra los resultados experimentales del ejercicio activo de rehabilitación. Las pruebas experimentales que se realizaron con el exoesqueleto
+consisten en ejercicios similares a las simulaciones. En las figuras
+\ref{fig:forcetobillo} y \ref{fig:forcerodilla} se muestran los
+datos obtenidos experimentalmente en las articulaciones del tobillo
+y la rodilla respectivamente. Se presentan en la gráfica superior la
+posici\'{o}n angular $q$ mientras en la gráfica inferior se muestra
+una comparaci\'{o}n entre la fuerza ejercida por el humano $f_{h}$ y
+la fuerza producida por el actuador $f_{a}$ para cada
+articulaci\'{o}n. La fuerza que proporciona el humano es estimada
+por medio del sensor de fuerza, este valor se ha multiplicado por un
+factor de 10 para poder distinguir su comportamiento en cada
+gr\'{a}fica. Podemos analizar el comportamiento en 4 partes
+principales:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.7]{imagenes/experimental_t.pdf}
+\caption{Comparaci\'{o}n entre la fuerza proporcionada por el humano
+y la salida resultante del mecanismo, para la articulaci\'{o}n del
+tobillo.} \label{fig:forcetobillo}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.7]{imagenes/experimental_r.pdf}
+\caption{Comparaci\'{o}n entre la fuerza proporcionada por el humano
+y la salida resultante del mecanismo, para la articulaci\'{o}n de la
+rodilla.} \label{fig:forcerodilla}
+\end{figure}
+
+1) En la primera etapa del experimento, en el intervalo de tiempo
+$t=$(0, 1.5) [s] el usuario permanece en la posici\'{o}n de pie y
+las articulaciones se encuentran en $q_{1}=90^{\circ}$,
+$q_{2}=180^{\circ}$. La fuerza del humano y del actuador son
+iguales, ($f_{h1}= f_{a1}=0$, $f_{h2}= f_{a2}=0$) pues no se realiza
+ning\'{u}n movimiento.
+\bigskip
+
+2)  En esta segunda etapa del ejercicio, en el intervalo de tiempo
+$t=$(1.5, 2.3) [s] el humano flexiona las articulaciones, los
+ángulos correspondientes descienden hasta llegar aproximadamente a
+$q_{1}=70^{\circ}$, $q_{2}=110^{\circ}$. La fuerza del humano es
+negativa lo que se traduce en un esfuerzo por disminuir el
+\'{a}ngulo de las articulaciones, note que la fuerza del actuador
+$f_{a}$ tiene un comportamiento similar a $f_{h}$, sin embargo
+recordemos que en esta gr\'{a}fica $f_{h}$ esta multiplicada por 10.
+La amplificaci\'{o}n de la fuerza es pequeña debido a que en esta
+etapa del ejercicio se necesita menor intervenci\'{o}n del
+exoesqueleto y no es necesaria mucha potencia en los actuadores para
+realizar este movimiento.
+\bigskip
+
+3)  En esta tercera etapa del ejercicio, en el intervalo de tiempo
+$t=$(2.3, 2.5) [s] el usuario permanece en una posici\'{o}n de
+flexi\'{o}n de las articulaciones, manteniendo los valores de las
+articulaciones constantes en $q_{1}=70^{\circ}$,
+$q_{2}=110^{\circ}$. El torque generado por los pares
+gravitacionales es mayor que en las dem\'{a}s etapas del ejercicio,
+observe la figura \ref{fig:simu_tob_rod}. En esta pequeña
+fracci\'{o}n de tiempo podemos observar que el usuario no ejerce
+fuerza ($f_{h}=0$) en el sensor sin embargo existe un valor positivo
+en la fuerza producida por los actuadores $f_{a}$, esto debido al
+termino de la compensaci\'{o}n de la gravedad generada por el
+control. Esta amplificaci\'{o}n de fuerza se refleja en una
+disminuci\'{o}n en el esfuerzo f\'{i}sico de las articulaciones del
+humano para mantener esta posici\'{o}n.
+\bigskip
+
+4)  En esta cuarta etapa del ejercicio, en el intervalo de tiempo
+$t=$(2.5, 3.1) [s] el usuario extiende las articulaciones con el
+objetivo de regresar a la posici\'{o}n principal (mantenerse en
+pie), los valores de las posiciones angulares se incrementan hasta
+llegar nuevamente a $q_{1}=90^{\circ}$, $q_{2}=180^{\circ}$. El
+esfuerzo del humano para realizar este movimiento se genera por
+medio de una fuerza positiva $f_{h}$. La amplificaci\'{o}n de la
+fuerza $f_{a}$ es mayor que en tiempos anteriores, debido a que el
+esfuerzo para regresar a la posici\'{o}n de pie requiere una mayor
+potencia en los actuadores. Note que existe una saturaci\'{o}n en
+los valores m\'{a}ximos de $f_{a1}=45$ y $f_{a2}=58$. Esta se
+produce debido a que existe un torque m\'{a}ximo en los motores.
+
+
+
+\section{Control PD con compensación adaptable}
+
+\subsection{Resultados numéricos}
+
+
+Esta sección muestra los resultados numéricos del ejercicio pasivo de rehabilitación.
+Conviene recordar que el ejercicio de rehabilitación pasivo consiste
+en una fuerza externa que se aplica en alguna extremidad del humano
+para generar movimiento con la res--tricción de que el usuario no
+puede hacer ningún tipo de contracción muscular. Para la simulación
+se diseño una trayectoria deseada $(q_{d_{1}},q_{d_{2}})$ en base a
+un ejercicio de flexionar y extender las articulaciones de la
+rodilla y el tobillo \cite{KINEO1}, \cite{KINEO2}. Las trayectorias
+se generan por medio de las siguientes funciones:
+
+
+\begin{equation}
+\label{Eq:Trajectory}
+\begin{array}{lr}
+q_{d1}=(B_1-C_{i_1})(1-e^{-0.02t^2}+C_{i_1})+C_1(1-e^{-2t^3})\sin{(\omega_1t)}\\
+q_{d1}=(B_2-C_{i_2})(1-e^{-0.02t^2}+C_{i_2})+C_2(1-e^{-2t^3})\sin{(\omega_2t)}\\
+\end{array}
+\end{equation}
+
+Se asume que los movimientos de las articulaciones de la rodilla y
+el tobillo son parecidas a señales sinusoidales \cite{ozawa2003new},
+\cite{kirtley2005cga}. El valor de las constantes $\omega _{1}$ y
+$\omega _{2}$ debe ser tal que se realicen 8 repeticiones por
+minuto. El movimiento angular de la rodilla tiene una amplitud de
+$30º$ mientras que el tobillo es de $10º$. Los valores de las
+variables en la función son $B_{1}=\tfrac{2\pi}{9}$,
+$B_{2}=-\tfrac{\pi}{36}$, $C_{1}=\tfrac{\pi }{12}$,
+$C_{2}=\tfrac{\pi}{36}$ y $\omega _{1}=\omega _{2}=\tfrac{4\pi
+}{15}$. La simulación dura $700$ segundos. Primero se realiza la
+experimentación en simulación del ejercicio de rehabilitación sobre
+un modelo en 3D (vea la figura \ref{Fig:3D_VIEW}) para que
+posteriormente se pueda hacerlo en el prototipo experimental.
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{imagenes/3dview.pdf}
+\caption{Evaluación de la trayectoria deseada con respecto a los
+valores seleccionados. a) Posición inicial b) Etapa intermedia c)
+Máxima extensión de la trayectoria deseada.} \label{Fig:3D_VIEW}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.5]{imagenes/parametros_sim.pdf}
+  \caption{Resultados numéricos  de la Identificación de paramétrica.}
+  \label{Fig:SIM_PARAMETERS}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.5]{imagenes/sim_tray_rod.pdf}
+  \caption{Resultados numéricos del seguimiento de trayectoria para la articulación de la rodilla ($q_1$)}
+  \label{Fig:SIM_Q1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.5]{imagenes/sim_tray_tob.pdf}
+  \caption{Resultados numéricos del seguimiento de trayectoria para la articulación del tobillo ($q_2$)}
+  \label{Fig:SIM_Q2}
+\end{figure}
+
+La identificación de parámetros corresponde satisfactoriamente a lo
+esperado, aproxi--madamente en un tiempo $t=150 s$ los valores
+tienden a la estimación de los parámetros (ver figura
+\ref{Fig:SIM_PARAMETERS}). Después de cambiar el valor de la masa
+$m1$ en el tiempo $t=350s$ los parámetros convergen a sus nuevos
+valores de manera rápida.
+
+\subsection{Resultados Experimentales}
+
+Esta sección muestra los resultados experimentales del ejercicio pasivo de rehabilitación. Las articulaciones del exoesqueleto $q_1$ y $q_2$ siguen
+asintóticamente la trayectoria deseada $q_{d}$. Las gráficas de la
+figura \ref{Fig:PD_Q1} muestran el torque $\tau$ generado por la ley
+de control separada en dos partes, la primera en azul es el termino
+PD del control $(K_{p}\tilde{q}+K_{v}\overset{\cdot}{\tilde{q}})$, y
+en verde es el termino de compensación adaptable
+$(\Phi\hat{\theta})$. Una característica del control es el
+seguimiento de la trayectoria en tiempo real mientras se estiman los
+parámetros del sistema al mismo tiempo en que se ejecuta el
+ejercicio.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{imagenes/controles.pdf}
+\caption{Comparación experimental entre el  termino PD y el termino
+de la compensación adaptable del control aplicado al prototipo
+experimental.} \label{Fig:PD_Q1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.5]{imagenes/seguimiento_exp.pdf}
+  \caption{Seguimiento de trayectoria experimental de las articulaciones $q_1$, $q_2$.}
+  \label{Fig:EXP_Q1}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+    \includegraphics[scale=0.5]{imagenes/parametros_exp.pdf}
+  \caption{Resultados experimentales de la identificación de parámetros.}
+  \label{Fig:PARAMETERS}
+\end{figure}
+
+En el tiempo $t=200s$ la compensación adaptable permanece estable
+mientras que el torque generado por el termino PD decrece. Para
+mostrar la eficacia del control adaptable, cuando se tiene
+completamente identificada la dinámica del par exoesquelto-usuario,
+se induce un incremento $m_1$ 1kg ($t=350s$) se observa que el
+termino PD de la ley de control actúa inmediatamente de nuevo para
+realizar la rutina sin que se note algún cambio en la trayectoria,
+mientras que el termino de la compensación paramétrica nuevamente se
+adapta a la dinámica del sistema que a cambiado debido a que tiene
+nuevos parámetros.
+
+En la figura \ref{Fig:EXP_Q1} se observa el seguimiento de
+trayectoria de las articulación del prototipo experimental. Note que
+a pesar del cambio del parámetro en la masa $m_1$ la trayectoria
+deseada no es afectada, esto es debido a las características de
+utilizar este tipo de control adaptable. En la figura
+\ref{Fig:PARAMETERS} se muestra los resultados numéricos obtenidos
+en tiempo real de la estimación de parámetros, nótese que el
+comportamiento es bastante cercano al que se obtuvo en simulación.
+Cuando un usuario utiliza el exoesqueleto y se estiman los
+parámetros que le corresponden se pueden rescribir como condiciones
+iniciales dentro del vector de estimación de parámetros
+(\ref{Eq.Adaptive_Law}) para que de esta manera la estimación de
+parámetros sea mucho más rápida y la compensación adaptable iguale
+rápidamente la dinámica del sistema.
+
+
+
+\section{Comparación de resultados de los tres controles utilizados}
+
+\subsection{Resultados Numéricos}
+
+
+Se realizo una simulación para comparar las tres leyes de control
+implementadas durante el proyecto:
+
+1)Controlador PD con compensación de la gravedad.
+
+2)Controlador PD con compensación adaptable.
+
+3) Controlador Modos deslizantes.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.35]{imagenes/traking_tobillo.pdf}
+\caption{Seguimiento de trayectoria en simulación para la
+articulación del tobillo, comparación de los tres controles.}
+\label{fig:simu_slidin_tobillo}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.35]{imagenes/traking_rodilla.pdf}
+\caption{Seguimiento de trayectoria en simulación para la
+articulación de la rodilla comparación de los tres controles.}
+\label{fig:simu_sliding_rodilla}
+\end{figure}
+
+En la simulación se genera una trayectoria deseada que simula un
+ejercicio de rehabilitación pasivo. La comparación entre estos tres
+controladores consiste en utilizar el mismo modelo dinámico para
+cada controlador agregando un término aditivo en la posición angular
+de las articulaciones ($q+\delta$). El objetivo es revisar la
+robustez de cada controlador programado al incluirle esta
+perturbación. En la figura \ref{fig:simu_slidin_tobillo} nos muestra
+el seguimiento de trayectoria de los tres controladores, para la
+rodilla y para el tobillo se muestra en la figura
+\ref{fig:simu_sliding_rodilla} donde podemos observar que el
+desempeño del control en modos deslizantes es mejor en comparación
+con los dos controles restantes.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.35]{imagenes/zoom_tobillo_comp.pdf}
+\caption{Seguimiento de trayectoria en simulación para la
+articulación del tobillo con un acercamiento al grafico donde la
+Trayectoria deseada es constante. } \label{fig:zoom_tobillo}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.35]{imagenes/zoom_rodilla_comp.pdf}
+\caption{Seguimiento de trayectoria en simulación para la
+articulación de la rodilla con un acercamiento al grafico donde la
+Trayectoria deseada es constante.} \label{fig:zoom_rodilla}
+\end{figure}
+
+
+
+
+
+
+En la figura \ref{fig:zoom_tobillo} se muestra en la grafica de la
+parte superior  el seguimiento de trayectoria realizado con el
+control en modos deslizantes de la ecuación \ref{control_sliding}
+para tobillo y en la figura \ref{fig:zoom_rodilla} para la rodilla.
+Posteriormente en las graficas del centro de las figuras podemos ver
+un acercamiento del seguimiento de trayectoria anterior donde se
+puede notar el castañeo que se produce debido a utilizar este tipo
+de leyes de control. En las últimas graficas se observan un
+acercamiento al seguimiento de trayectoria de una nueva simulación
+la cual utiliza el control en modos deslizantes libre de castañeo
+\ref{control_sliding_sin_chatering}, nos damos cuenta con esto que
+si es posible reducir considerablemente este efecto y de esta forma
+podemos implementar la ley de control en nuestro prototipo real.
+
+
+
+\subsection{Resultados Experimentales}
+
+Los resultados obtenidos de la implementación del control en modos
+deslizantes libre de castañeo se observan en las graficas de la
+figura \ref{fig:activo_error}, donde primero se realizo un
+seguimiento de trayectoria que se utiliza como ejercicio de
+rehabilitación pasiva. En estas graficas se observa un buen
+resultado de seguimiento y se considera libre del efecto de castañeo
+ya que el prototipo experimental realiza el trabajo sin ningún
+efecto que pueda alterar o empeorar la recuperación del usuario.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.40]{imagenes/activo_error.pdf}
+\caption{Seguimiento de trayectoria en ejercicio activo y error de
+posición, datos experimentales.} \label{fig:activo_error}
+\end{figure}
+
+
+En la figura \ref{fig:real_pasivo}  se muestra un ejercicio de
+rehabilitación pasiva utilizando el control en modos deslizantes,
+esta es una ventaja de este tipo de control ya que puede ser
+utilizado en ambos ejercicios de rehabilitación (pasiva y activa),
+los resultados obtenidos y mostrados en la grafica son
+satisfactorios ya que se observa que el error de posición es de un
+valor de rango máximo entre $[-0.5,0.5]$.
+
+
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale = 0.40]{imagenes/real_pasivo.pdf}
+\caption{Seguimiento de trayectoria en ejercicio pasivo, datos
+experimentales.} \label{fig:real_pasivo}
+\end{figure}

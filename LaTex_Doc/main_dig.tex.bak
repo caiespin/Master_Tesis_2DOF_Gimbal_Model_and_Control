@@ -1,0 +1,226 @@
+%\newtheorem{propiedad}{Propiedad}
+%\newtheorem{lemma}{Lema}
+%\newtheorem{teorema}{Teorema}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NOTAS:
+% * Las imagenes en JPG deben de ser en 450 x 400 pixeles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Tipo de documento ( report article book )
+%\PassOptionsToPackage{nottoc}{tocbibind}
+\documentclass[letterpaper,12pt,twoside,spanish]{book}
+
+% Librerias ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%\usepackage[ansinew]{inputenc}                                      % Necesario para compatibilidade de                                                                   % algunas palabras con acento
+
+\usepackage[english,spanish]{babel}                                 % Para espannol
+\usepackage[latin1]{inputenc}
+\usepackage{calligra}
+\usepackage{graphicx}                                               % Para graficos
+\usepackage{tocbibind}                                              % Biblio en indice
+\usepackage{anysize} 
+\usepackage{caption} 
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage [pdftex]{color}                                              % Soporte para el comando \marginsize
+\usepackage[pdftex=true,colorlinks=true,plainpages=false]{hyperref} % Soporte hipertexto.
+\usepackage{colortbl}                                               % Poner color en las tablas
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} 		         	%Solo para PDFLaTeX
+\usepackage{epstopdf}
+\usepackage[refpages]{gloss}                                        % Sporte para glosario, refpages
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{amsmath}                                                % para origen palabra
+%----------------------------------------------------------------------------------------------------------
+
+% Margenes +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\marginsize{3cm}{3cm}{2.5cm}{2.5cm}
+%-----------------------------------------------------------------------------------------------------------
+
+% Espaciado ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%Para f = 1 => espaciado normal.
+%Para f = 1.3 => 1.5 espacios.
+%Para f = 1.6 => doble espacio.
+\linespread{1.5}
+%-----------------------------------------------------------------------------------------------------------
+
+%\makegloss                                              % Compila el glosario
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%Inicio del documento ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{document}
+
+
+
+\pagenumbering{roman}
+
+% Nomenclatura
+    %\abstractname      Resumen
+    %\alsoname          Ver también (paquete makeidx)
+    %\appendixname      Apéndice
+    %\bibname           Bibliografía (report,book)
+    %\ccname            cc (letter)
+    %\chaptername       Capítulo (report,book)
+    %\contentsname      Indice general
+    %\enclname          encl (letter)
+    %\figurename        Figura (para flotantes)
+    %\headtoname        a (letter)
+    %\indexname         Index
+    %\listfigurename    Lista de Figuras
+    %\listtablename     Lista de Tablas
+    %\pagename          Página (letter)
+    %\partname          Parte
+    %\refname           Referencias (article)
+    %\seename           ver (paquete makeidx)
+    %\tablename         Tabla (para flotantes)
+% Fin de la nomenclatura
+
+% Inicio de apartado para renombrar
+    \renewcommand{\bibname}{Bibliografía}               %Cambia de BIBLIOGRAPHY -> BIBLIOGRAFIA
+    \renewcommand{\contentsname}{Índice General}        %Cambia el nombre del indice general
+    \renewcommand{\tablename}{Tabla}                    %Cambia de CUADRO -> TABLA
+    \renewcommand{\listtablename}{Índice de Tablas}     %Cambia de Indice de CUADROS -> TABLAS
+    \renewcommand{\listfigurename}{Índice de Figuras}   %Cambia el nombre del indice de figuras
+    \renewcommand{\chaptername}{Capítulo}               %Cambia el titulo de capitulo
+    \renewcommand{\glossname}{Glosario}                 %Cambia el nombre al glosario
+    \renewcommand{\appendixname}{Ap\'{e}ndice}          %Cambia el nombre a los anexos
+    \renewcommand{\figurename}{Figura}                  %Espero que cambie el nombre de las figuras
+    \renewcommand{\glosslinkcolor}{blue}                %Pone las ligas del glosario en azul
+% Fin de apartado para renombrar
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+
+\input{includes/portada1.tex}                            % Include de portada
+%\maketitle                                              % Compila parametros de la portada
+
+%\input{includes/colores}
+
+\include{includes/Dedicatoria}
+
+%kkkkkkkkkkkk\mbox{}  % Caja en blanco
+%kkkkkkkkkkkk\newpage % para ajustar una hoja nueva
+\include{includes/Agradecimientos}                                  % Agradecimientos
+
+%\mbox{}
+%kkkkkkkkkkkkkkkkk\newpage
+\include{includes/resumen}
+
+%\mbox{}
+%kkkkkkkkkkkkkkkkkk\newpage
+\include{includes/abstract}
+
+%\vspace*{17.5cm}
+%\noindent \includegraphics[width=0.5cm]{includes/logo-al.jpg} \newline
+
+
+%\mbox{}
+\include{includes/contents} % Tabla de contenido (indice)
+%\newpage
+\include{includes/figures}
+
+\include{includes/tables}
+%\mbox{}
+%\newpage
+\pagenumbering{arabic}
+\input{cap/cap_01.tex} %Introduccion
+\input{cap/cap_02.tex} %Antecedentes
+\input{cap/cap_03.tex} %Modelado
+\input{cap/cap_04.tex} %Control
+\input{cap/cap_05.tex} %Implementación y Pruebas
+\input{cap/cap_06.tex} %Resultados
+\input{cap/cap_07.tex} %Conclusiones y Trabajo Futuro
+\appendix
+\input{cap/anexo.tex}
+\input{cap/publicaciones.tex}
+
+%\printgloss{glsbase,glosario/glos03}                        % El glosario consta de:
+                                                            % - Archivo en glosario
+                                                            % - y su bibliografia en bib
+\begin{thebibliography}{9}
+%Aplications
+
+\bibitem{1} S. Stolle, R. Rysdyk "Flight Path Following Guidance for Unmanned Air Vehicles with Pan-Tilt Camera for Target Observation" Proceedings of the AIAA Digital Avionics Systems Conference, Oct. 2003.
+
+\bibitem{2} Deok-Jin Lee, I. Kaminer, V. N. Dobrokhodov "Autonomous Feature Following for Visual Surveillance Using a Small Unmanned Aerial Vehicle with Gimbaled Camera System" International Journal of Control, Automation, and Systems, Springer, pp. 957-966, 2010.
+
+%Gimbal Model and Control
+
+\bibitem{3} P. J. Kennedy "Direct versus Indirect Line of sight (LOS) Stabilization" IEEE Trans. On Control Systems Technology, Vol. 11, No. 1, pp. 3-15 Jan 2003.
+
+\bibitem{4} Ekstrand B. "Equations of Motion for a Two-Axes Gimbal System" IEEE Trans. On Aerospace and Electronic Systems, Vol. 37, No. 3, pp. 1083-1091 July 2001.
+
+\bibitem{5} M. Abdo, A. R. Vali, A. Toloei "Research on the Cross-Coupling of a Two Axes Gimbal System with Dynamic Unbalance" INTECH International Journal of Advanced Robotic Systems, Vol. 10, 357, 2013.
+
+\bibitem{6} M. Abdo, A. R. Vali, A. Toloei "Cascade Control System for Two Axes Gimbal System with Mass Unbalance" International Journal of Scientific and Engineering Research, Vol. 4, No. 9, Sept 2013.
+
+\bibitem{7} X. Mao, Y. Liu "Optical Axis Stabilization of a Two-Axis Platform" Intelligent Systems, 2009. GCIS '09. WRI Global Congress on Intelligent Systems, Vol. 2, pp. 274-278, May 2009.
+
+\bibitem{8} A.K. Rue "Precision Stabilization Systems" IEEE Trans. On Aerospace and Electronic Systems, Vol. AES-10, No. 1, Jan. 1974.
+
+\bibitem{9} A.K. Rue "Stabilization of Precision Electrooptical Pointing and Tracking Systems" IEEE Transactions on Aerospace and Electronic Systems. Vol. AES-5, pp. 805-819, Sep. 1969.
+
+
+\bibitem{10} Bo Li, D. Hullender, M. DiRenzo "Nonlinear Induced Disturbance Rejection in Inertial Stabilization Systems" IEEE Trans. on Control Systems Technology, Vol.6, No. 3, May 1998.
+
+\bibitem{11} D. Schoenwald, U. Ozguner, R. Graham "Control of gimbal dynamics via sensitivity models for uncertainty in friction parameters" First IEEE Conference on Control Applications, Vol. 1, pp. 52-57, Sep. 1992.
+
+%Sliding Mode Control
+
+\bibitem{12} Yue Hu, Yuan Cao, Shifeng Zang "Design of Sliding Mode Control with Disturbance Observers for Inertial Platform" 25th Chinese Control and Decision Conference (CCDC),pp. 4652-4656, May 2013.
+
+\bibitem{13} B.J. Smith, W.J. Schrenk, Y.B. Shtessel "Sliding mode control in a two-axis gimbal system" IEEE Aerospace Conference, Vol. 5,pp. 457-470, Mar 1999.
+
+\bibitem{14} Ö. Hastürk, A. M. Erkmen, I. Erkmen "Proxy-Based Sliding Mode Stabilization of a Two-Axis Gimbaled Platform" Procedings of the World Congress on Engineering and Computer Science, Vol. 1, Oct. 2011.
+
+\bibitem{15} T.H. Lee, S.S. Ge, C.P. Wong "Adaptative neural network feedback control of a passive line-of-sight stabilization system" Mechatronics, Vol. 8, pp.887-903, Dec. 1998.
+
+\bibitem{16} Viboon Sangveraphunsiri and Kritsanun Malithong "Control of Inertial Stabilization Systems Using Robust Inverse Dynamics Control and Sliding Mode Control" The 23rd Conference of the Mechanical Engineering Network of Thailand, Nov. 2009.
+
+\bibitem{17}J.A.R. Krishna Moorty, R. Marathe and B. Hari, "Fussy controller for line of sight stabilization system" Optical Engineering,Vol. 43, pp. 1394-1400, 2004.
+
+\bibitem{18}J.A.R. Krishna Moorty, R. Marathe and V.R. Sule, "H$\infty$ control law for for line-of-sight stabilization for mobile land vehicles" Optical Engineering,Vol. 41, pp. 2935-2944, 2002.
+
+%Books
+
+\bibitem{19}Etkin, B., and Reid, L. D. \textit{Dynamics of Flight Stability and Control} Wiley, New York 1996.
+
+\bibitem{20} Ardema, M. D. (s.f.). \textit{Newton-Euler Dynamics}. Springer 2005.
+
+\bibitem{21} Yuri Shtessel, Christopher Edwards, Leonid Fridman and Arie Levant. \textit{Sliding Mode Control and Observation}. Springer, 2014.
+
+\bibitem{22} Jean-Jacques E. Slotine, Weiping Li. \textit{Applied Nonlinear Control} Prentice Hall, 1991. 
+
+\bibitem{23} John J. Graig. \textit{Introduction to Robotics: Mechanics and Control} Pearson Education, 2006.
+ 
+\bibitem{24} Tedric A. Harris. \textit{Rolling Bearing Analysis}. Jhon Wiley, 2001.
+
+%Thesis
+ 
+\bibitem{25}Martin Ernesto Orejas, "UAV Stabilized Platform" Kiruna 2007.
+
+\bibitem{26} Nicolas J. Brake "Control System Development for Small UAV Gimbal" California, 2012.
+
+\bibitem{27} Yan Gao, XiaoLin Zhang "Active Zoom Cameras Control System using Stereo Parallax" IEEE International Carnahan Conference on Security Technology (ICCST), pp. 418-424, Oct. 2010.
+
+\bibitem{28} ASM Material Data Sheet. ASM Aerospace Specification Metals
+
+\bibitem{29} Hilkert, J.M., "Inertially stabilized platform technology Concepts and principles" IEEE Control Systems, Vol. 28, pp. 26-46, Feb. 2008.
+
+
+\end{thebibliography}
+\bibliographystyle{plain}                                  % Utiliza el archivo ''plain.bst''
+%\bibliographystyle{alpha}                                  % Utiliza el archivo ''plain.bst''
+%\bibliographystyle{apalike}                                 % Utiliza el archivo ''plain.bst''
+%\bibliographystyle{plainnat}
+
+%Nota: para manejar varios archivos, no poner espacios.
+%%\bibliography{bib/b1,bib/glosario}  %%con glosario                        % Espera el archivo con extension bib
+%kkkkk\bibliography{bib/bibliografia}             %% sin glosario                                                  % ''*.bib''
+
+\end{document}
+%fin del documento -----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------------------------------------

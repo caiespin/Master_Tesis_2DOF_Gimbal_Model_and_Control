@@ -1,0 +1,343 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla para tesis por David Luna se encuentra bajo una Licencia
+% Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported.
+% http://creativecommons.org/licenses/by-nc-sa/3.0/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{C\'{a}lculos del Modelado}
+
+\section{} \label{sec:A1}
+
+Usando las ecuaciones desarrolladas en la secci\'{o}n ~\ref{sec:RelCinBas} podemos obtener relaciones de las velocidades angulares en t\'{e}rminos de las variables controladas y las perturbaciones de la base. De la ecuaci\'{o}n ~\ref{eq:w_Tz}
+\begin{equation*}
+\omega_{T_z} = s \varepsilon \, \omega_{P_x} + c \varepsilon \, \omega_{P_z}
+\end{equation*}
+
+Despejando $\omega_{P_z}$ de la expresi\'{o}n anterior, obtenemos
+\begin{equation}
+\omega_{P_z}  = \frac{1}{c \varepsilon} \left( \omega_{T_z} - s \varepsilon \, \omega_{P_x} \right)
+\label{eq:w_Pz_cv}
+\end{equation}
+
+Sustituyendo ~\ref{eq:w_Pz_cv} en la ecuaci\'{o}n ~\ref{eq:w_Tx}
+\begin{align*}
+\omega_{T_x} &=c \varepsilon \, \omega_{P_x} - s \varepsilon \, \left( \frac{\omega_{T_z} - s \varepsilon \, \omega_{P_x}}{c \varepsilon} \right) \\
+ &=c \varepsilon \, \omega_{P_x} -  \left( \frac{s \varepsilon \, \omega_{T_z} - s^2 \varepsilon \, \omega_{P_x}}{c \varepsilon} \right) \\
+ &= \frac{c^2 \varepsilon \, \omega_{P_x} - s \varepsilon \, \omega_{T_z} - s^2 \varepsilon \, \omega_{P_x}}{c \varepsilon} \\
+ &=  \frac{ \left( c^2 \varepsilon + s^2 \varepsilon \right) \omega_{P_x} - s \varepsilon \, \omega_{T_z}}{c \varepsilon}  
+\end{align*}
+
+\begin{equation}
+\omega_{T_x}  = \frac{1}{c \varepsilon} \left( \omega_{P_x} - s \varepsilon \, \omega_{T_z} \right)
+\label{eq:w_Tx_cv}
+\end{equation}
+
+\section{} \label{sec:A2}
+
+La relación entre las aceleraciones angulares del eslab\'{o}n interno y el externo del gimbal, pueden obtenerse derivando la ecuaci\'{o}n ~\ref{eq:w_T}
+
+\begin{equation*}
+\frac{d \, \omega _{T}}{dt} =\frac{d}{dt}\left(R_{T}^{P}\omega _{P}+\dot{\varepsilon }\hat{\jmath}_{T}\right)
+\end{equation*}
+
+Derivando la expresi\'{o}n anterior, obtenemos
+
+\begin{equation}
+\dot{\omega} _{T} =R_{T}^{P}\dot{\omega} _{P} + R_{Aux}\omega _{P}\dot{\varepsilon } + \ddot{E}
+\label{eq:dotw_T}
+\end{equation}
+
+Donde
+
+\begin{equation*}
+R_{Aux}=  \left[ 
+\begin{array}{ccc}
+-s\varepsilon & 0 & -c\varepsilon \\ 
+0 & 0 & 0 \\ 
+c\varepsilon  & 0& -s\varepsilon%
+\end{array}%
+\right]
+\end{equation*}
+
+y
+
+\begin{equation*}
+\ddot{E}=\left[ \begin{array}{c}  0 \\ \ddot{\varepsilon} \\ 0 \end{array} \right]
+\end{equation*}
+
+Resolviendo~\ref{eq:dotw_T} para $\dot{\omega} _{P}$
+
+\begin{equation*}
+\begin{array}{rcl}
+R_{T}^{P}\dot{\omega} _{P}&=&\dot{\omega} _{T} - R_{Aux}\omega _{P}\dot{\varepsilon } - \ddot{E}\\
+ \dot{\omega} _{P}&=&{R_{T}^{P}}^{-1}\left[\dot{\omega} _{T} - R_{Aux}\omega _{P}\dot{\varepsilon } - \ddot{E} \right]
+ \end{array}
+\end{equation*}
+
+Aplicando las propiedades de la matriz de rotación ${R_{T}^{P}}^{-1}={R_{T}^{P}}^{T}=R_{P}^{T}$, obtenemos
+
+\begin{equation}
+\dot{\omega} _{P}=R_{P}^{T}\dot{\omega} _{T} - R_{P}^{T}R_{Aux}\omega _{P}\dot{\varepsilon } - R_{P}^{T}\ddot{E}
+\label{eq:dotw_P}
+\end{equation}
+
+\section{} \label{sec:A3}
+
+La din\'{a}mica de la \textit{Elevaci\'{o}n cruzada} esta dada por el tercer elemento del vector ~\ref{CrossEl_4}
+
+\begin{equation*}
+\begin{array}{rcl}
+M_P&=&I_{P} R_{P}^{T}\dot{\omega}_{T} + R_{P}^{T} I_{T}\dot{\omega}_{T} + \omega_P \times I_{P}\omega_P  + R_{P}^{T}\left(\omega _{T} \times I_{T}\omega_T \right)\\
+& & - I_{P}R_{P}^{T}R_{Aux}\omega _{P}\dot{\varepsilon } - I_{P} R_{P}^{T}\ddot{E} 
+\end{array}
+\end{equation*}
+
+Ahora, expandiendo el primer t\'{e}rmino del lado derecho
+
+\begin{equation*}
+\begin{array}{rcl}
+I_{P} R_{P}^{T}\dot{\omega}_{T}&=&\left[ 
+\begin{array}{ccc}
+I_{P_x}  &      0   &   0 \\
+   0     &  I_{P_y} &   0 \\
+   0     &      0   & I_{P_z}\\
+\end{array} \right]\left[  \begin{array}{ccc} c\varepsilon & 0 & s\varepsilon \\  0 & 1 & 0 \\  -s\varepsilon \text{\ \ \ } & 0\text{\ \ } & c\varepsilon \end{array}\right]\left[\begin{array}{c} \dot{\omega}_{T_x} \\ \dot{\omega}_{T_y} \\ \dot{\omega}_{T_z} \end{array}\right]\\
+& & + \left[  \begin{array}{ccc} c\varepsilon & 0 & s\varepsilon \\  0 & 1 & 0 \\  -s\varepsilon \text{\ \ \ } & 0\text{\ \ } & c\varepsilon \end{array}\right]\left[ 
+\begin{array}{ccc}
+I_{T_x}  &      0   &   0 \\
+   0     &  I_{T_y} &   0 \\
+   0     &      0   & I_{T_z}\\
+\end{array} \right]\left[\begin{array}{c} \dot{\omega}_{T_x} \\ \dot{\omega}_{T_y} \\ \dot{\omega}_{T_z} \end{array}\right]
+\end{array}
+\end{equation*}
+
+\begin{equation*}
+\begin{array}{rcl}
+ &=&\left[ 
+\begin{array}{ccc}
+I_{P_x}c\varepsilon   &      0   &   I_{P_x} s\varepsilon \\
+   0     &  I_{P_y} &   0 \\
+-I_{P_z} s\varepsilon     &      0   & I_{P_z} c\varepsilon \\
+\end{array} \right]\left[\begin{array}{c} \dot{\omega}_{T_x} \\ \dot{\omega}_{T_y} \\ \dot{\omega}_{T_z} \end{array}\right]\\
+& & + \left[ 
+\begin{array}{ccc}
+I_{T_x}c\varepsilon   &      0   &   I_{T_Z} s\varepsilon \\
+   0     &  I_{T_y} &   0 \\
+-I_{T_x} s\varepsilon     &      0   & I_{T_z} c\varepsilon \\
+\end{array} \right]\left[\begin{array}{c} \dot{\omega}_{T_x} \\ \dot{\omega}_{T_y} \\ \dot{\omega}_{T_z} \end{array}\right]
+\end{array}
+\end{equation*}
+
+Tomando el tercer t\'{e}rmino 
+
+\begin{equation*}
+\left[ I_{P} R_{P}^{T}\dot{\omega}_{T} \right]_3  =  -I_{P_z} s\varepsilon \dot{\omega}_{T_x} + I_{P_z} c\varepsilon \dot{\omega}_{T_z}\dot{\omega}_{T_z} - I_{T_x} s\varepsilon \dot{\omega}_{T_x} + I_{T_z} c\varepsilon \dot{\omega}_{T_z}
+\end{equation*}
+
+\begin{equation}
+\left[ I_{P} R_{P}^{T}\dot{\omega}_{T} \right]_3 = c\varepsilon \left( I_{P_z}+I_{T_z} \right)\dot{\omega}_{T_z} - s\varepsilon \left( I_{P_z}+I_{T_x} \right)\dot{\omega}_{T_x}
+\label{eq:Term_1}
+\end{equation}
+
+Expandiendo el segundo y tercer t\'{e}rmino
+
+\begin{equation*}
+\begin{array}{rcl}
+\omega_P \times I_{P}\omega_P  + R_{P}^{T}\left(\omega _{T} \times I_{T}\omega_T \right)&=& \left[\begin{array}{c} \left( I_{P_z}-I_{P_y} \right) \omega_{P_y} \omega_{P_z} \\ 
+\left( I_{P_x}-I_{P_z} \right) \omega_{P_x} \omega_{P_z} \\ \left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y} \end{array}\right]\\
+& & +\left[ 
+\begin{array}{ccc}
+I_{T_x}c\varepsilon   &      0   &   I_{T_Z} s\varepsilon \\
+   0     &  I_{T_y} &   0 \\
+-I_{T_x} s\varepsilon     &      0   & I_{T_z} c\varepsilon \\
+\end{array} \right] \left[\begin{array}{c} \left( I_{T_z}-I_{T_y} \right) \omega_{T_y} \omega_{T_z} \\ 
+\left( I_{T_x}-I_{T_z} \right) \omega_{T_x} \omega_{T_z} \\ \left( I_{T_y}-I_{T_x} \right) \omega_{T_x} \omega_{T_y} \end{array}\right]\\
+ & = &\left[\begin{array}{c} \left( I_{P_z}-I_{P_y} \right) \omega_{P_y} \omega_{P_z} \\ 
+\left( I_{P_x}-I_{P_z} \right) \omega_{P_x} \omega_{P_z} \\ \left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y} \end{array}\right] \\
+ & &+ \left[\begin{array}{c} c\varepsilon \left( I_{T_z}-I_{T_y} \right) \omega_{T_y} \omega_{T_z} + s\varepsilon \left( I_{T_y}-I_{T_x} \right) \omega_{T_x} \omega_{T_y}\\ 
+\left( I_{T_x}-I_{T_z} \right) \omega_{T_x} \omega_{T_z} \\  -s\varepsilon \left( I_{T_z}-I_{T_y} \right) \omega_{T_y} \omega_{T_z} + c\varepsilon \left( I_{T_y}-I_{T_x} \right) \omega_{T_x} \omega_{T_y} \end{array}\right]
+\end{array}
+\end{equation*}
+
+Tomando el tercer t\'{e}rmino 
+
+\begin{equation*}
+\begin{array}{cl}
+\left[ \omega_P \times I_{P}\omega_P  + R_{P}^{T}\left(\omega _{T} \times I_{T}\omega_T \right) \right]_3 = &\left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y} -s\varepsilon \left( I_{T_z}-I_{T_y} \right) \omega_{T_y} \omega_{T_z}\\
+ & + c\varepsilon \left( I_{T_y}-I_{T_x} \right) \omega_{T_x} \omega_{T_y}
+\end{array}
+\end{equation*}
+
+Sustituyendo ~\ref{eq:w_Tx_cv} y desarrollando, obtenemos
+
+\begin{equation}
+\begin{array}{cl}
+\left[ \omega_P \times I_{P}\omega_P  + R_{P}^{T}\left(\omega _{T} \times I_{T}\omega_T \right) \right]_3 = & \left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y} - s\varepsilon I_{T_z} \omega_{T_y} \omega_{T_z}\\
+ & + I_{T_y} \omega_{T_y} \omega_{P_x} - c\varepsilon I_{T_x} \omega_{T_x} \omega_{T_y}\end{array}
+ \label{eq:Term_2_3}
+\end{equation}\newline
+
+Expandiendo el cuarto t\'{e}rmino
+
+\begin{equation*}
+\begin{array}{rcl}
+I_{P}R_{P}^{T}R_{Aux}\omega _{P}\dot{\varepsilon }&=& \left[ 
+\begin{array}{ccc}
+I_{T_x}  &      0   &   0 \\
+   0     &  I_{T_y} &   0 \\
+   0     &      0   & I_{T_z}\\
+\end{array} \right]\left[  \begin{array}{ccc} c\varepsilon & 0 & s\varepsilon \\  0 & 1 & 0 \\  -s\varepsilon \text{\ \ \ } & 0\text{\ \ } & c\varepsilon \end{array}\right]\\
+
+ & & \left[ 
+\begin{array}{ccc}
+-s\varepsilon & 0 & c\varepsilon \\ 
+0 & 0 & 0 \\ 
+c\varepsilon  & 0& -s\varepsilon%
+\end{array}%
+\right]\left[\begin{array}{c} \omega_{P_x} \\ \omega_{P_y} \\ \omega_{P_z} \end{array}\right]\dot{\varepsilon }\\
+ 
+ &=& \left[ 
+\begin{array}{ccc}
+I_{P_x}c\varepsilon   &      0   &   I_{P_x} s\varepsilon \\
+   0     &  I_{P_y} &   0 \\
+-I_{P_z} s\varepsilon     &      0   & I_{P_z} c\varepsilon \\
+\end{array} \right]\left[ 
+\begin{array}{ccc}
+-s\varepsilon & 0 & c\varepsilon \\ 
+0 & 0 & 0 \\ 
+c\varepsilon  & 0& -s\varepsilon%
+\end{array}%
+\right]\left[\begin{array}{c} \omega_{P_x} \\ \omega_{P_y} \\ \omega_{P_z} \end{array}\right]\dot{\varepsilon }\\
+
+&=& \left[ 
+\begin{array}{ccc}
+-s\varepsilon c\varepsilon I_{P_x} + s\varepsilon c\varepsilon I_{P_x} & 0 & -c^2\varepsilon I_{P_x} - s^2\varepsilon I_{P_x} \\ 
+0 & 0 & 0 \\ 
+ s^2\varepsilon I_{P_z} + c^2\varepsilon I_{P_z} & 0& s\varepsilon c\varepsilon I_{P_z} - s\varepsilon c\varepsilon I_{P_z}%
+\end{array}%
+\right]\left[\begin{array}{c} \omega_{P_x} \\ \omega_{P_y} \\ \omega_{P_z} \end{array}\right]\dot{\varepsilon }\\
+
+&=& \left[ 
+\begin{array}{ccc}
+0 & 0 & -\left( c^2\varepsilon + s^2\varepsilon \right) I_{P_x} \\ 
+0 & 0 & 0 \\ 
+ \left( c^2\varepsilon + s^2\varepsilon \right) I_{P_z} & 0& 0%
+\end{array}%
+\right]\left[\begin{array}{c} \omega_{P_x} \\ \omega_{P_y} \\ \omega_{P_z} \end{array}\right]\dot{\varepsilon }\\
+
+&=& \left[ 
+\begin{array}{ccc}
+0 & 0 & -I_{P_x} \\ 
+0 & 0 & 0 \\ 
+I_{P_z} & 0& 0%
+\end{array}%
+\right]\left[\begin{array}{c} \omega_{P_x} \\ \omega_{P_y} \\ \omega_{P_z} \end{array}\right]\dot{\varepsilon }\\
+
+&=& \left[\begin{array}{c} -I_{P_x} \omega_{P_x}\dot{\varepsilon } \\ 0 \\ I_{P_z} \omega_{P_z}\dot{\varepsilon } \end{array}\right]
+\end{array}
+\end{equation*}
+
+Tomando el tercer t\'{e}rmino
+
+\begin{equation}
+\left[ I_{P}R_{P}^{T}R_{Aux}\omega _{P}\dot{\varepsilon}\right]_3 = I_{P_z} \omega_{P_z}\dot{\varepsilon}
+\label{eq:Term_4}
+\end{equation}\newline
+
+Expandiendo el quinto t\'{e}rmino
+
+\begin{equation*}
+\begin{array}{rcl}
+I_{P} R_{P}^{T}\ddot{E}&=&\left[ 
+\begin{array}{ccc}
+I_{P_x}  &      0   &   0 \\
+   0     &  I_{P_y} &   0 \\
+   0     &      0   & I_{P_z}\\
+\end{array} \right]\left[  \begin{array}{ccc} c\varepsilon & 0 & s\varepsilon \\  0 & 1 & 0 \\  -s\varepsilon \text{\ \ \ } & 0\text{\ \ } & c\varepsilon \end{array}\right]\left[\begin{array}{c} 0 \\ \ddot{\varepsilon} \\ 0 \end{array}\right]\\
+ &=&\left[ 
+\begin{array}{ccc}
+I_{P_x}c\varepsilon   &      0   &   I_{P_x} s\varepsilon \\
+   0     &  I_{P_y} &   0 \\
+-I_{P_z} s\varepsilon     &      0   & I_{P_z} c\varepsilon \\
+\end{array} \right]\left[\begin{array}{c} 0 \\ \ddot{\varepsilon} \\ 0 \end{array}\right]\\
+
+ &=& \left[\begin{array}{c} 0 \\ I_{P_y}\ddot{\varepsilon} \\ 0 \end{array}\right]
+\end{array}
+\end{equation*}
+
+Del desarrollo anterior podemos observar que el tercer t\'{e}rmino es cero
+
+\begin{equation}
+\left[I_{P} R_{P}^{T}\ddot{E}\right]_3=0
+\label{eq:Term_5}
+\end{equation}
+
+\section{} \label{sec:A4}
+
+La ecuaci\'{o}n ~\ref{CrossEl_6}, dada en la secci\'{o}n ~\ref{sec:Din_cross}, puede ser modificada al expresar las variables $\omega_{T_x}$ y $\omega_{P_z}$ en t\'{e}rminos de las variables de control y las perturbaciones de la base, estas variables ya fueron desarrolladas en  ~\ref{sec:A1}.
+
+Usando las ecuaciones ~\ref{eq:w_Tx_cv} y ~\ref{eq:w_Pz_cv}, el primer t\'{e}rmino del lado derecho de ~\ref{CrossEl_7}, puede ser expresado como
+
+\begin{equation}
+\begin{array}{rcl}
+s\varepsilon \left( I_{P_z}-I_{T_x} \right)\dot{\omega}_{T_x} & = & s\varepsilon \left( I_{P_z}+I_{T_x} \right) \left[c\varepsilon \dot{\omega}_{B_x} + s\varepsilon \dot{\omega}_{B_y} - t\varepsilon \omega_{P_y} \omega_{P_x} - \omega_{P_y} \omega_{B_z} \right] \\
+ & & + t\varepsilon \left( I_{P_z}+I_{T_x} \right) \omega_{P_y} \omega_{T_z}
+\end{array}
+\end{equation}
+
+Desarrollando el segundo t\'{e}rmino, obtenemos
+
+\begin{equation}
+\begin{array}{rcl}
+\left[ I_{P_z} \omega_{T_x} - s\varepsilon I_{T_x} \omega_{P_z} \right]\dot{\varepsilon}&=&t\varepsilon \left( I_{P_z}+I_{T_x} \right)\omega_{T_z} \omega_{P_y}\\
+& & - t\varepsilon \left( I_{P_z}+I_{T_x} \right)\omega_{T_z} \omega_{T_y} + \frac{1}{c\varepsilon} \left( I_{P_z}+ s^2\varepsilon I_{T_x} \right)\omega_{T_y} \omega_{P_x}\\
+ & & - \frac{1}{c\varepsilon} \left( I_{P_z}+ s^2\varepsilon I_{T_x} \right)\omega_{P_x} \omega_{P_y}
+\end{array}
+\end{equation}
+
+Desarrollando el tercer t\'{e}rmino
+
+\begin{equation}
+\begin{array}{c}
+-c\varepsilon\left[ \left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y}- s\varepsilon I_{T_z} \omega_{T_y} \omega_{T_z} + I_{T_y} \omega_{T_y} \omega_{P_x} - c\varepsilon I_{T_x} \omega_{T_x} \omega_{T_y}\right]=\\
+c\varepsilon\left( I_{T_x}-I_{T_y} \right)\omega_{T_y} \omega_{P_x} + s\varepsilon \, c\varepsilon\left( I_{T_z}-I_{T_x} \right)\omega_{T_y} \omega_{T_z} - c\varepsilon\left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y}
+\end{array}
+\end{equation}
+
+Sustituyendo todo lo anterior en ~\ref{CrossEl_7}, obtenemos
+
+\begin{equation}
+\begin{array}{rcl}
+Js\dot{\omega}_{T_z}&=&s\varepsilon \left( I_{P_z}+I_{T_x} \right) \left[c\varepsilon \dot{\omega}_{B_x} + s\varepsilon \dot{\omega}_{B_y} - t\varepsilon \omega_{P_y} \omega_{P_x} - \omega_{P_y} \omega_{B_z} \right] \\
+ & & + t\varepsilon \left( I_{P_z}+I_{T_x} \right) \omega_{P_y} \omega_{T_z}t\varepsilon \left( I_{P_z}+I_{T_x} \right)\omega_{T_z} \omega_{P_y}\\
+& & - t\varepsilon \left( I_{P_z}+I_{T_x} \right)\omega_{T_z} \omega_{T_y} + \frac{1}{c\varepsilon} \left( I_{P_z}+ s^2\varepsilon I_{T_x} \right)\omega_{T_y} \omega_{P_x}\\
+ & & - \frac{1}{c\varepsilon} \left( I_{P_z}+ s^2\varepsilon I_{T_x} \right)\omega_{P_x} \omega_{P_y} + c\varepsilon\left( I_{T_x}-I_{T_y} \right)\omega_{T_y} \omega_{P_x}\\
+
+ & & + s\varepsilon \, c\varepsilon\left( I_{T_z}-I_{T_x} \right)\omega_{T_y} \omega_{T_z} - c\varepsilon\left( I_{P_y}-I_{P_x} \right) \omega_{P_x} \omega_{P_y}\\
+ 
+ & & + c\varepsilon\left[T_{U_{Pz}}-k_{Pvf}\dot{\eta }+k_{Pcf} \, \mathrm{sign}\left( \dot{\eta} \right) + T_{az} \right]
+ \end{array}
+\end{equation}
+
+Reagrupando y desarrollando la expresi\'{o}n anterior
+
+\begin{equation}
+\begin{array}{rcl}
+Js\dot{\omega}_{T_z} & = & -k_{Pvf} \omega_{T_z} +\left[s\varepsilon \, c\varepsilon\left(I_{T_z} -I_{T_x} \right) - t\varepsilon \left(I_{P_z} +I_{T_x} \right) \right]\omega_{T_y}\omega_{T_z}\\ 
+
+ & & + \left[ 2t\varepsilon \left(I_{P_z} +I_{T_x} \right) \right] \omega_{T_z}\omega_{P_y} +\left[ \frac{1}{c\varepsilon} \left(I_{P_z} +I_{T_x} \right)- c\varepsilon I_{T_y} \right] \omega_{P_x}\omega_{T_y} \\ 
+
+ & & + \left[s\varepsilon \left(I_{P_z} +I_{T_x} \right)\right]\left[ c\eta\dot{\omega}_{B_x} + s\eta\dot{\omega}_{B_y}- \omega_{P_y}\omega_{B_z}\right]\\ 
+
+ & & +\left[c\varepsilon \left(I_{P_x} +I_{P_y} \right)- s\varepsilon \, t\varepsilon \left(I_{P_z} +2I_{T_x} \right)-\frac{1}{c\varepsilon}I_{P_z} \right]\omega_{P_y}\omega_{P_x}\\ 
+
+ & & + s\varepsilon k_{Pvf}\omega_{P_x} + c\varepsilon k_{Pvf}\omega_{B_z} - c\varepsilon k_{Pcf} \, \mathrm{sign}\left( \frac{1}{c\varepsilon} \omega_{T_z} - t\varepsilon \omega_{P_x} - \omega_{B_z}\right)\\ 
+
+ & & - c\varepsilon T_{U_{Pz}} +c\varepsilon T_{az}
+\end{array}
+\label{crossap}
+\end{equation}
+
+Finalmente sustituyendo ~\ref{eq:w_Px} y ~\ref{eq:w_Py} en \ref{crossap} llegamos a la ecuaci\'{o}n de la din\'{a}mica de elevaci\'{o}n cruzada.
+
+

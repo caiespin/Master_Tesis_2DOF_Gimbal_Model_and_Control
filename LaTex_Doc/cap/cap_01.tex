@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla para tesis por David Luna se encuentra bajo una Licencia
+% Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported.
+% http://creativecommons.org/licenses/by-nc-sa/3.0/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introducci\'on}
+\section{Motivaci\'on}
+En las ultimas dos d\'{e}cadas se ha presenciado un gran incremento en la utilizaci\'{o}n de veh\'{i}culos a\'{e}reos no tripulados (VANTs) en aplicaciones de comunicaciones y defensa. Mientras que con sistemas VANT de gran tama\~{n}o se logran grandes prestaciones esto tambi\'{e}n incrementa enormemente el costo. Consecuentemente existe mucho interés en el desarrollo de plataformas pequeñas y de bajo costo que puedan realizar tareas normalmente asignadas a sistemas VANT de mayor tamaño como en operaciones de reconocimiento, vigilancia e inteligencia.
+
+El uso de aeronaves cambi\'{o} como las fuerzas militares analizan el espacio de batalla proporcionando conocimiento de la situaci\'{o}n mucho m\'{a}s all\'{a} de las perspectivas de sus fuerzas terrestres y navales, es por este motivo y gracias al avance de la tecnolog\'{i}a en el campo de las aeronaves no tripuladas (VANTs) que existe una gran proliferación de sistemas de reconocimiento, vigilancia e inteligencia aerotransportados. 
+
+Los sistemas de reconocimiento, vigilancia e inteligencia (ISR) por sus siglas en inglés son aquellos que recolectan, procesan y diseminan informaci\'{o}n e inteligencia para apoyar las acciones del comandante, jugando un papel primordial en el soporte a operaciones militares. Algunos ejemplos de sistemas ISR incluyen sistemas de vigilancia y reconocimiento que van desde sat\'{e}lites a aeronaves tripuladas como el Lockheed U-2\footnote{Es un avi\'{o}n de vigilancia a gran altitud, monomotor y monoplaza, usado por la Fuerza A\'{e}rea de los Estados Unidos (USAF) y previamente por la Agencia Central de Inteligencia (CIA). Realiza misiones de vigilancia todo tiempo a altitudes superiores a 21.000 m.} y no tripuladas como el Global Hawk\footnote{Es un veh\'{i}culo a\'{e}reo no tripulado (UAV) empleado por la Fuerza A\'{e}rea de los Estados Unidos como una aeronave de vigilancia a\'{e}rea.}, hasta otros equipos de base terrestre, a\'{e}rea, mar\'{i}tima o espacial as\'{i} como equipos humanos de inteligencia. Los datos de inteligencia prove\'{i}dos por sistemas ISR pueden tomar muchas formas, incluyendo im\'{a}genes \'{o}pticas, de radar, infrarrojas u otras se\~{n}ales electr\'{o}nicas.
+
+Uno de los principales objetivos de una plataforma ISR es entregar la mayor calidad de informaci\'{o}n posible, la cual es en muchos casos transmisión de v\'{i}deo en tiempo real. Existen muchos factores a tomar en cuenta en la calidad de la imagen proporcionada por estos sistemas, siendo uno de los m\'{a}s importantes la capacidad de apuntar de forma precisa el eje \'{o}ptico de la c\'{a}mara, tambi\'{e}n llamado l\'{i}nea de vista (LOS por sus siglas en ingl\'{e}s) hacia un objetivo fijo o m\'{o}vil. Para resolver este problema usualmente se emplea un sistema de suspenci\'{o}n card\'{a}n o gimbal\footnote{Consiste en aros con ejes conc\'{e}ntricos cuyos ejes forman un \'{a}ngulo recto, lo cual permite mantener la orientaci\'{o}n de un eje de rotaci\'{o}n en el espacio aunque su soporte se mueva. En este trabajo, por motivos de simplicidad, denominaremos como \textit{"gimbal"} al sistema completo de motores, suspenci\'{o}n card\'{a}n, c\'{a}mara y electr\'{o}nica.} con el sensor montado en el eslab\'{o}n interno del mismo. La motivaci\'{o}n de este trabajo es el estudio a fondo de estos sistemas, desde la comprensi\'{o}n de su din\'{a}mica, el diseño del control de estabilizaci\'{o}n, hasta los retos pr\'{a}cticos que representa su dise\~{n}o y construcci\'{o}n.
+ 
+
+\section{Problema General}
+Para lograr la estabilizaci\'{o}n de l\'{i}nea de vista se emplean usualmente sistemas gimbal de dos ejes Pan-Tilt, con sensores inerciales colocados en el eslab\'{o}n interno, que sirven como realimentaci\'{o}n al sistema de control que mantiene al sensor \'{o}ptico apuntando hacia el objetivo, si bien no es el \'{u}nico m\'{e}todo, la pr\'{a}ctica ha demostrado ser el m\'{a}s efectivo \cite{3}. El diseño de sistemas m\'{o}viles de seguimiento de alta precisión dinámica es dif\'{i}cil de conseguir debido principalmente a las perturbaciones causadas por el movimiento del veh\'{i}culo, las limitaciones del hardware, las incertidumbres en los par\'{a}metros inerciales del sistema y la naturaleza altamente no lineal de estos sistemas, no obstante el diseño de un control robusto puede absorber gran parte de estas perturbaciones, logrando mantener las variables de control dentro de l\'{i}mites aceptables.
+
+\section{Objetivos del Proyecto}
+
+El objetivo principal de esta tesis es primeramente desarrollar el modelo matem\'{a}tico de un sistema gimbal de dos grados de libertad con una configraci\'{o}n Pan-Tilt, posteriormente diseñar un control que permita estabilizar de forma precisa la l\'{i}nea de vista de la c\'{a}mara montada en el eslab\'{o}n interno del sistema y finalmente se desea construir un prototipo en el cual se pueda implementar el control dise\~{n}ado y as\'{i} obtener datos pr\'{a}cticos del algoritmo desarrollado.
+
+\section{Organización de la Tesis}
+
+Este trabajo esta dividido en 7 cap\'{i}tulos, los cap\'{i}tulos 1 y 2 son introductorios y cubren los conceptos b\'{a}sicos y las aplicaciones de los sistemas gimbal de dos grados grados de libertad para la estabilizaci\'{o}n de l\'{i}nea de vista, los cap\'{i}tulos del 3 al 6 abarcan el desarrollo, pruebas y resultados, El cap\'{i}tulo 7 contiene las conclusiones y el trabajo futuro.
+
+Cap\'{i}tulo 1, Introducci\'{o}n, este cap\'{i}tulo ha introducido la motivaci\'{o}n, la problem\'{a}tica general y los objetivos del proyecto de tesis.
+
+Cap\'{i}tulo 2, Antecedentes, provee informaci\'{o}n y conceptos importantes sobre el \'{a}rea a tratar, detalles sobre los sistemas de estabilizaci\'{o}n inercial y la forma en la que se integran en los veh\'{i}culos A\'{e}reos Aut\'{o}nomos as\'{i} como el entorno de operaci\'{o}n al que estar\'{i}a sometido el sistema y una revisi\'{o}n bibliogr\'{a}fica sobre trabajos de investigaci\'{o}n relevantes en el \'{a}rea de estabilizaci\'{o}n de l\'{i}nea de vista.
+
+Cap\'{i}tulo 3, Din\'{a}mica y Cinem\'{a}tica, se desarrolla el modelado del sistema por el m\'{e}todo de Newton-Euler. Posteriormente se analiza a detalle la din\'{a}mica del sistema presentado las propiedades del mismo y su comportamiento bajo ciertas consideraciones de simetr\'{i}a.
+
+Cap\'{i}tulo 4, Control, provee informaci\'{o}n a detalle del diseño del sistema de control y se desarrollan varias simulaciones en las que se muestra la efectividad del algoritmo dise\~{n}ado al compararlo con un compensador proporcional integral com\'{u}nmente utilizado para el control de estos sistemas.
+
+Cap\'{i}tulo 5, Implementaci\'{o}n, describe el prototipo diseñado tanto su mec\'{a}nica como su electr\'{o}nica y el proceso de su construcci\'{o}n, adema\'{a}s se presentan la programaci\'{o}n y arquitectura del hardware.
+
+Cap\'{i}tulo 6, Resultados, Se describe la experimentaci\'{o}n desarrollada para la obtenci\'{o}n de los datos y se presentan los resultados obtenidos.
+
+Cap\'{i}tulo 7, Conclusiones y Trabajo futuro, Resume los resultados claves del proyecto y provee los puntos de partida para un trabajo adicional. Este es el cap\'{i}tulo m\'{a}s importante del trabajo, pues provee los m\'{u}ltiples puntos a partir de los cuales podr\'{i}a mejorarse el trabajo presentado en esta tesis enfoc\'{a}ndose en los aprendizajes y cada unos de los puntos clave que afectan el desempe\~{n}o de la plataforma desarrollada.   

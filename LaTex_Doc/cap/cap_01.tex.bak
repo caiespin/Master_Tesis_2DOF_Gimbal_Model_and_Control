@@ -1,0 +1,373 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla para tesis por David Luna se encuentra bajo una Licencia
+% Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported.
+% http://creativecommons.org/licenses/by-nc-sa/3.0/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{INTRODUCCIÓN}
+
+La inmovilizaci\'{o}n de las articulaciones por medio de una
+f\'{e}rula para la restauraci\'{o}n de una fractura o la falta de
+movimiento en las articulaciones por causa de alguna enfermedad como
+la hemiplejia, derivan en complicaciones como rigidez articular,
+atrofia muscular, dolor y edema. Los m\'{u}sculos que no se utilizan
+se atrofian y pierden un 5\% de fuerza en un día y hasta un 8\% en
+una semana. Con la inmovilizaci\'{o}n se produce la atrofia tanto en
+las fibras musculares de contracci\'{o}n lenta (tipo uno) como en
+las de contracci\'{o}n r\'{a}pida (tipo dos). La atrofia de las
+fibras de contracci\'{o}n r\'{a}pida es la primera que se observa
+con la p\'{e}rdida de fuerza, mientras que la atrofia de las fibras
+de contracci\'{o}n lenta se refleja en la p\'{e}rdida de
+resistencia. Para contrarrestar todos estos efectos negativos,
+ser\'{a} necesario no s\'{o}lo la movilizaci\'{o}n pasiva de la
+musculatura afectada y activa cuando sea posible, sino tambi\'{e}n
+la elongaci\'{o}n controlada de esta musculatura. Si no se produce
+movimiento en los m\'{u}sculos y tendones se pierde la capacidad de
+resistir y generar fuerza.
+
+\bigskip
+
+La rehabilitaci\'{o}n se lleva a cabo a trav\'{e}s de ejercicios
+terap\'{e}uticos. Seg\'{u}n la APTA (American Physical Therapy
+Association) los ejercicios terap\'{e}uticos se definen como la
+aplicaci\'{o}n sistem\'{a}tica planeada de movimientos f\'{i}sicos,
+posturas o actividades diseñadas para: 1) remediar o prevenir
+deterioros, 2) mejorar el funcionamiento y 3) mejorar la
+condici\'{o}n f\'{i}sica. Un programa de rehabilitaci\'{o}n puede
+incluir una gama de diferentes tipos de ejercicios como los de
+mejorar o prevenir el deterioro de la capacidad aer\'{o}bica, fuerza
+muscular, potencia y resistencia, flexibilidad o amplitud de
+movimiento, equilibrio, coordinación y agilidad. El fisioterapeuta
+es el especialista encargado de tratar todas las consecuencias de
+las lesiones que conlleva una fractura para hacer que la
+recuperaci\'{o}n de esta sea la \'{o}ptima en el menor tiempo
+posible. Los fisioterapeutas estan capacitados con habilidades
+especiales para diseñar programas terap\'{e}uticos de ejercicios. Un
+fisioterapeuta requiere de la comprensi\'{o}n del proceso de la
+enfermedad subyacente o la patolog\'{i}a, la fisiolog\'{i}a, la
+biomec\'{a}nica, los principios f\'{i}sicos y la base de evidencias
+que respaldan la zona afectada. El fisioterapeuta tambi\'{e}n debe
+ser capaz de identificar los objetivos de tratamiento apropiadas en
+relaci\'{o}n con cada paciente. Adem\'{a}s de tener una
+comprensi\'{o}n de los principios f\'{i}sicos como son centro de
+gravedad, base de apoyo, impulso, inercia y fricci\'{o}n, para que
+las influencias de estos factores en el cuerpo humano puedan ser
+consideradas para el diseño de los ejercicios y producir el efecto
+deseado \cite{pocket}.
+\bigskip
+
+La rehabilitaci\'{o}n est\'{a} enfocada en dos objetivos, primero
+recuperar la fuerza muscular que b\'{a}sicamente es la capacidad del
+m\'{u}sculo para contraerse y segundo recuperar la resistencia que
+es la capacidad de realizar el mismo movimiento repetidas veces. La
+asistencia del fisioterapeuta para realizar el ejercicio puede
+variar dejando que el paciente haga el ejercicio completamente solo,
+ayudar a realizar el ejercicio o incluso asistirlo completamente.
+Existen diferentes tipos de ejercicios de rehabilitaci\'{o}n como
+los ejercicios de fortalecimiento, estos incrementan la cantidad de
+fuerza que el m\'{u}sculo puede generar. En un ejercicio
+isom\'{e}trico, la longitud de la fibra muscular es constante de
+forma que la contracci\'{o}n muscular ocurre sin movimiento
+articular. Un ejercicio isot\'{o}nico es un ejercicio din\'{a}mico
+realizado con una carga o resistencia constante, pero sin controlar
+la velocidad del movimiento, en estos ejercicios la tensi\'{o}n de
+una fibra muscular es relativamente constante. El ejercicio
+isocin\'{e}tico origina un movimiento articular constante, para esto
+se var\'{i}a la resistencia en una respuesta a la fuerza muscular
+aplicada. La ventaja del ejercicio isocin\'{e}tico es que el musculo
+puede fortalecerse de forma \'{o}ptima manteniendo un rango de
+movimiento articular completo, cosa que no es posible con los
+isom\'{e}tricos ni con los isot\'{o}nicos. La desventaja del
+ejercicio isocin\'{e}tico es que requiere de la utilizaci\'{o}n de
+una m\'{a}quina para variar la resistencia mientras se mantiene una
+tasa constante de movimiento \cite{fracturas}. Hoy en día la
+rehabilitación de la marcha y las extremidades inferiores se basan
+en fisioterapia manual y ejercicios musculares específicos. El uso
+de terapia mediante robots ha mejorado los procedimientos de
+rehabilitación actuales, permitiendo así una rehabilitación de mayor
+calidad y aumentando también la motivación del paciente, quien se
+sentirá más independiente de la disponibilidad de fisioterapeutas,
+mejorando repetividad y motivación. En las \'{u}ltimas d\'{e}cadas,
+muchos robots dedicados a la rehabilitaci\'{o}n de extremidades
+inferiores se han desarrollado para recobrar la movilidad de las
+extremidades afectadas.
+
+
+\bigskip
+
+Las terapias tradicionales generalmente se centran en entrenamientos
+en caminadoras para mejorar la movilidad funcional. Esta t\'{e}cnica
+de rehabilitaci\'{o}n es conocida como entrenamiento en pasarela
+rodante con apoyo parcial del peso corporal PBWSTT (Partial
+BodyWeight Support Treadmill Training). En esta t\'{e}cnica se
+coloca al paciente en una caminadora con un arn\'{e}s de cabeza que
+soporta parte del peso de su cuerpo. Mientras el paciente intenta
+caminar, tres terapeutas lo auxilian ayud\'{a}ndole a mover
+correctamente las piernas y la cadera. Muchos sistemas rob\'{o}ticos
+han sido desarrollados con el objetivo de automatizar y mejorar esta
+t\'{e}cnica como un medio para reducir el trabajo del terapeuta
+\cite{galvez}. Por lo general estos sistemas est\'{a}n basados en
+robots tipo exoesqueleto en combinaci\'{o}n con una caminadora.
+Actualmente en el mercado se encuentran algunos exoesqueletos para
+la rehabilitaci\'{o}n de la marcha que est\'{a}n reportados en:
+Lokomat \cite{colombo} observe la figura \ref{fig:lokomat}; LokoHelp
+\cite{freivogel}; ReoAmbulator \cite{west}; ALEX \cite{banala};
+LOPES \cite{veneman}.
+\bigskip
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 0.40]{imagenes/lokomat.pdf}
+\caption{Sistema "Lokomat", para la rehabilitación de la marcha.}
+\label{fig:lokomat}
+\end{centering}
+\end{figure}
+
+Otros sistemas rob\'{o}ticos est\'{a}n en un estado de
+investigaci\'{o}n o en desarrollo, pero son utilizados para llevar a
+cabo algunos ensayos cl\'{i}nicos, por ejemplo: ARTHuR \cite{wynne};
+POGO y PAM \cite{reinken}. Existen tres sistemas rob\'{o}ticos que
+permanecen bajo investigaci\'{o}n: ALTACRO \cite{beyl}; RGR
+\cite{pietrusinski}; String-Man \cite{surdilovic}.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 1]{imagenes/gaitmaster.pdf}
+\caption{Sistema de Rehabilitación "Gait Master 5" (GM5),
+Universidad de Tsukuba.} \label{fig:gaitmaster}
+\end{centering}
+\end{figure}
+
+Algunas m\'{a}quinas de rehabilitaci\'{o}n se basan en placas de pie
+programables, es decir, los pies del paciente se colocan en placas
+independientes cuyos movimientos son controlados por el sistema
+rob\'{o}tico para simular diferentes patrones de marcha, como por
+ejemplo el GTI \cite{hesse} que se encuentra a la venta y otros que
+se encuentran en investigaci\'{o}n como: HapticWalker
+\cite{schmidt}; GM5 \cite{yano} ver figura \ref{fig:gaitmaster};
+LLRR \cite{chen} y por \'{u}ltimo el robot de rehabilitaci\'{o}n de
+la marcha desarrollado en GNU (Gyeongsang National University)
+\cite{yoon}.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 1]{imagenes/rewalk.pdf}
+\caption{Sistema Vestible "ReWalk".} \label{fig:rewalk}
+\end{centering}
+\end{figure}
+
+Los llamados sistemas m\'{o}viles de rehabilitaci\'{o}n  para
+entrenamiento de la marcha en la  superficie son robots con
+servomotores seguidores de los movimientos de la caminata del
+paciente. Estos exoesqueletos permiten al paciente moverse bajo su
+propio control en lugar de moverse a trav\'{e}s de los patrones de
+movimiento predeterminados. A estos robots tambi\'{e}n se les llaman
+robots portables, alguno de ellos como por ejemplo el KineAssist
+\cite{peshkin} para entrenamiento de equilibrio y caminata. Este
+robot es controlado de acuerdo con las fuerzas detectadas en el
+sujeto por medio de celdas de peso situadas en un arn\'{e}s
+p\'{e}lvico. El WalkTrainer \cite{bouri} de Swortec SA, es un
+sistema de rehabilitaci\'{o}n rob\'{o}tico compuesto por un
+deambulador, una ortesis de pelvis, un apoyo del peso corporal, dos
+ortesis de pierna, y un electro-estimulador controlado en tiempo
+real. El ReWalk \cite{goffer} es tambi\'{e}n un robot portable,
+motorizado cuasi-rob\'{o}tico de ARGO Medical Technologies Ltd., que
+se puede utilizar para actividades terap\'{e}uticas, ver figura
+\ref{fig:rewalk}. El HAL \cite{kawamoto} es un robot port\'{a}til
+diseñado para una amplia gama de aplicaciones como la
+rehabilitaci\'{o}n o como ayuda para realizar trabajos pesados y
+construido en varias versiones (versi\'{o}n de cuerpo completo y la
+versi\'{o}n de dos piernas). Una versi\'{o}n de una sola pierna del
+HAL \cite{kawamoto:09} tambi\'{e}n ha sido desarrollada para
+soportar la caminata de las personas con hemiplejia, vea la figura
+\ref{fig:hal}. Este soporte para caminar se evalu\'{o} con un sujeto
+con hemipl\'{e}jica que no era capaz de doblar su rodilla derecha.
+Por \'{u}ltimo el WHERE I y II \cite{seo} son prototipos con los que
+se han realizado ensayos cl\'{i}nicos para demostrar la eficacia de
+ambos sistemas en un paciente con heridas leves en las piernas.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 1]{imagenes/hal.pdf}
+\caption{Versión para una sola pierna del Robot "Hal".}
+\label{fig:hal}
+\end{centering}
+\end{figure}
+
+Por otra parte tambi\'{e}n existen los llamados entrenadores de la
+marcha est\'{a}ticos que son sistemas rob\'{o}ticos que se centran
+en los movimientos guiados de extremidades con el fin de tener un
+efecto \'{o}ptimo desde un punto de vista terap\'{e}utico y
+funcional. El objetivo de estos sistemas es la obtenci\'{o}n de
+fortalecimiento eficaz de los m\'{u}sculos y el desarrollo de
+resistencia, as\'{i} como la movilidad articular y coordinaci\'{o}n
+de movimientos. El MotionMaker \cite{schmitt} de Swortec SA, es un
+sistema de entrenamiento estacionario que permite realizar
+ejercicios de movimientos en las articulaciones con la
+participaci\'{o}n activa de los miembros paralizados, vea la figura
+ \ref{fig:motion}. Las extremidades est\'{a}n conectadas a la
+ortesis en el nivel del pie para simular fuerzas naturales de
+reacci\'{o}n del suelo. Las ventajas de \'{e}ste sistema son los
+ejercicios controlados por sensores en tiempo real combinados con la
+electro estimulaci\'{o}n controlada y adaptado a los esfuerzos del
+paciente. El lambda \cite{clavel} es un robot para
+rehabilitaci\'{o}n y ejercitaci\'{o}n, se utiliza en la
+movilizaci\'{o}n de las extremidades inferiores, con su ayuda se
+proporciona el movimiento de las extremidades inferiores en el plano
+sagital, el cual incluye una rotaci\'{o}n adicional de la
+movilizaci\'{o}n del tobillo. Otro ejemplo de este tipo de
+configuraci\'{o}n  es un sistema de rehabilitaci\'{o}n con alambres
+impulsado por la pierna desarrollado por el Instituto Nacional de
+Ciencia Industrial Avanzada y Tecnología (AIST) de Tsukuba, Japón
+\cite{homma}.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 1]{imagenes/motion.pdf}
+\caption{Sistema de Rehabilitación "MotionMaker".}
+\label{fig:motion}
+\end{centering}
+\end{figure}
+
+El movimiento del tobillo es muy complicado debido a sus estructuras
+\'{o}seas complejas \cite{sui}. Muchos sistemas se han desarrollado
+para ejercitar o restaurar estos movimientos de tobillo y de
+rodilla. Estos sistemas pueden agruparse en ortesis de pie
+estaciona-rios o activa. Los sistemas estacionarios son los
+mecanismos rob\'{o}ticos diseñados para ejercitar el tobillo humano
+y los movimientos de rodilla sin caminar. El paciente se coloca
+siempre en el mismo lugar y s\'{o}lo el miembro requerido se
+ejercita. Algunos ejemplos de estos exoesqueletos son: Rutgers Ankle
+\cite{girone}; IIT-HPARR \cite{saglia}, vea la figura
+\ref{fig:ankle}; AKROD \cite{nikitczuk}; Leg-Robot \cite{kikuchi};
+GIST \cite{yoon}; NUVABAT \cite{ding}; este último es un
+rehabilitador de tobillo desarrollado en el departamento de mecánica
+en la Universidad de Londres \cite{dai}; El desarrollado en la
+Universidad de Auckland \cite{tsoi}; El desarrollado por MML (The
+Man-Machine Systems Laboratory) en NCKU (National Cheng Kung
+University \cite{lin}; El desarrollado en la escuela de ingeniería
+mecánica y automatización en la Universidad de Fuzhou \cite{sui}; El
+exoesquleto AIST Tsukuba \cite{homma}. Las ortesis del pie activas
+son exoesqueletos actuados que el usuario lleva puesto mientras
+camina en la superficie o en caminadora. Entre otras tienen la
+finalidad de controlar la posici\'{o}n y el movimiento del tobillo,
+compensar la debilidad y/o corregir deformidades. Estos sistemas son
+una evoluci\'{o}n de las tradicionales ortesis pasivas de miembros
+inferiores, con capacidades adicionales para promover la
+din\'{a}mica de la marcha apropiada para la rehabilitaci\'{o}n
+\cite{ferris}. Algunos ejemplos son: PGO \cite{ruthenberg}; PAGO
+\cite{belforte}; Anklebot \cite{roy}; Inte-ractive Motion
+\cite{krebs} que también se describe en: \cite{khanna}, más ejemplos
+son: MIT-AAFO \cite{blaya}; AFOUD \cite{agrawal}; KAFO
+\cite{sawicki}; RGT \cite{bharadwaj}; Yonsei-AAFO \cite{hwang};
+SUkorpion AR \cite{satici}.
+\bigskip
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 1]{imagenes/ankle.pdf}
+\caption{Robot de rehabilitación para el tobillo desarrollado en el
+Istituto Italiano de Tecnologia (IIT-HPARR).} \label{fig:ankle}
+\end{centering}
+\end{figure}
+
+Un exoesqueleto es una estructura electromecánica de cierta rigidez
+que es montada sobre el cuerpo para restaurar, rehabilitar o
+amplificar la funcion motora humana. El exoesqueleto tiene como
+objetivo pacientes que como consecuencia de diferentes patologías
+tienen una discapacidad motora, con problemas de coordinación
+muscular que impide el control de equilibrio o que tiene problemas
+en movimientos básicos de la vida cotidiana, como flexión y
+extensión de una determinada articulación de su cuerpo. Dentro de
+las ventajas de utilizar exoesqueletos para la rehabilitaci\'{o}n se
+pueden mencionar las siguientes: aprovechar la precisi\'{o}n que
+tiene un robot en poder aumentar gradualmente la velocidad en las
+repeticiones de una secuencia, la extensi\'{o}n de la posici\'{o}n
+articular, la resistencia o fuerza de oposici\'{o}n de un ejercicio
+de aumento de fuerza, etc. En algunos ejercicios, la resistencia que
+opone el fisioterapeuta deber\'{a} ser aumentada gradualmente para
+obtener una mejor\'{i}a en el paciente, con la presencia de sensores
+para medición de la fuerza y del esfuerzo, realizado por el
+paciente, pueden mejorar significativamente la rehabilitación de la
+persona bajo tratamiento. Durante el tratamiento, hay que recordar
+que el fisioterapeuta tambi\'{e}n puede provocar fracturas. Por lo
+tanto se debe conocer el estado del paciente, realizar siempre tomas
+cortas, presiones manuales y rehuir de resistencias externas y
+distales que supongan brazos de palanca excesivos. El examen
+muscular, que es una guía para la evaluación de la mejoría en la
+fuerza muscular durante la recuperación, puede ser asistido por el
+empleo de robots en cuya memoria se puede registrar el historial
+completo del paciente con fines de evaluación.
+\bigskip
+
+\section{OBJETIVOS}
+
+
+El objetivo de este trabajo de tesis est\'{a} enfocado mayormente en
+sistemas de rehabi--litaci\'{o}n de rodilla y tobillo. En la figura
+\ref{fig:fotoexo} se presenta un exoesqueleto de dos grados de
+libertad basado en la instrumentaci\'{o}n de una ortesis de
+extremidad inferior que proporciona una amplificaci\'{o}n de la
+fuerza humana, ofreciendo una disminuci\'{o}n en el esfuerzo del
+usuario para mantenerse en pie y realizar movimientos en la rodilla
+y el tobillo en el plano sagital, sin afectar el rendimiento de la
+pierna izquierda. Se considera como principales aportes, el
+desarrollo y estudio de un exoesqueletos basados en ortesis
+instrumentadas de dos grados de libertad, para asistir tobillo y
+rodilla. Para generar los torques de ayuda se han utilizado
+actuadores de tipo SEA. En el presente estudio se presenta un
+an\'{a}lisis completo del prototipo experimental que puede
+utilizarse en ejercicios pasivos y activos, es decir ejercicios en
+los que el humano realiza un esfuerzo en conjunto con el
+exoesqueleto y ejercicios en los que el humano no ofrece ningún
+esfuerzo de manera que el exoesqueleto realiza la totalidad del
+trabajo mecánico. Ambos ejercicios son utilizados comúnmente en la
+rehabilitación de las extremidades inferiores.
+
+\bigskip
+
+\begin{figure}
+\begin{centering}
+\includegraphics[scale = 0.35]{imagenes/fotoexo.pdf}
+\caption{Exoesqueleto de dos grados de libertad para asistir la
+pierna derecha.} \label{fig:fotoexo}
+\end{centering}
+\end{figure}
+
+\section{JUSTIFICACIÓN}
+
+El prototipo aquí presentado permite analizar el caso específico de
+cada paciente por medio de sensores de fuerza, sensores de posición
+y velocidad angular. La instrumentación del exoesqueleto nos permite
+estimar tanto el estado de atrofia como la deseable mejora que se
+presenta en las articulaciones antes de iniciar cualquier rutina de
+rehabilitación. Cada rutina que se aplica a un usuario dependerá de
+un examen el cual debe considerar la resistencia, la fuerza y la
+velocidad con la que el usuario puede movilizar las articulaciones,
+así como la capacidad de extender y flexionar la articulacion de la
+rodilla y el tobillo. Para el estudio de la cinemática y de la
+dinámica del exoesqueleto es necesario el desarrollo de un modelo
+matemático que permita evaluar los torques generado para asistencia
+del usuario, así como el control y monitoreo de señales en tiempo
+real. El modelo general del exoesqueleto se presenta en dos formas
+dependiendo del ejercicio de rehabilitación que se realice con el
+exoesqueleto (activo o pasivo). Se propusieron tres tipos de
+control, el primero para controlar un ejercicio activo de flexiones
+donde se utilizo un control PD con compensación de la gravedad. El
+segundo para controlar un ejercicio pasivo de seguimiento de una
+rutina, donde se utilizo un control PD con compensación adaptable.
+Una de las grandes ventajas de utilizar un control con adaptación,
+es la estimación de los parámetros del sistema que varían
+dependiendo de las cualidades físicas de cada persona que utiliza el
+exoesqueleto. Los parámetros son estimados por medio de una
+compensación adaptable añadida al control PD de manera que el
+ejercicio de rehabilitación se realiza de forma correcta sin
+necesidad de reprogramar el control cada vez que se cambia de
+usuario. Por último se programo un control en modos deslizantes
+cuyas ventajas inciden en la robustez del controlador ya que permite
+considerar que el modelo matemático de nuestro sistema tiene
+términos desconocidos además este control nos permite realizar los
+dos ejercicios de rehabilitación (pasiva y activa) para los cuales
+se diseño el exoesqueleto.
+
+\bigskip

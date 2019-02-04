@@ -1,0 +1,45 @@
+\thispagestyle{empty}
+\begin{minipage}{0.18\textwidth}
+\includegraphics[width=0.9\textwidth]{imagenes/cinvestavlogo.png}
+\end{minipage}
+\begin{minipage}{0.82\textwidth}
+\begin{center}
+\large \sc Centro de Investigaci\'{o}n y de Estudios Avanzados
+\newline del Instituto Polit\'{e}cnico Nacional
+\end{center}
+\end{minipage}
+\begin{minipage}{1\textwidth}
+\vspace{0.5cm}
+\centerline{\Large \bf Unidad Zacatenco}
+\vspace{0.25cm}
+\centerline{\Large \bf Departamento de Control Autom\'{a}tico}
+\vspace{2cm}
+\centerline{\Huge \bf Control de Sistemas No Lineales }
+\vspace{0.5cm}
+\centerline{\Huge \bf con Retardo en la Entrada}
+\vspace{2cm}
+\centerline{\bf Tesis que presenta}
+\vspace{0.25cm}
+\centerline{\Large \bf Jos\'{e} Jairo Ordaz Jim\'{e}nez}
+\vspace{1cm}
+\centerline{\bf para obtener el Grado de }
+\vspace{0.25cm}
+\centerline{\Large \bf Maestro en Ciencias}
+\vspace{1cm}
+\centerline{\bf en la Especialidad de}
+\vspace{0.25cm}
+\centerline{\Large \bf Control Autom\'{a}tico}
+\vspace{1cm}
+\centerline{\bf Director de Tesis}
+\vspace{0.25cm}
+\centerline{\Large \bf Dra. Sabine Marie Sylvie Mondi\'{e} Cuzange}
+\vspace{1.5cm}
+{\large \bf M\'{e}xico, D.F.\ \hfill Enero 2012}
+\end{minipage}%
+%EndExpansion
+
+\pagebreak
+%TCIMACRO{\TeXButton{Pagina en Blanco}{\thispagestyle{empty}}}%
+%BeginExpansion
+\thispagestyle{empty}%
+%EndExpansion

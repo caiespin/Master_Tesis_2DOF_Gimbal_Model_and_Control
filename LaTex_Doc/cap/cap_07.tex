@@ -1,0 +1,48 @@
+%%%simulacion
+\chapter{Conclusiones y Trabajo Futuro}
+\section{Conclusiones}
+
+En esta tesis se ha presentado el desarrollo de una plataforma de c\'{a}mara giroestabilizada para un veh\'{i}culo a\'{e}reo no tripulado con el fin de ser usada en misiones de reconocimiento, vigilancia e inteligencia. En resumen, en este trabajo se ha presentado:
+
+\begin{enumerate}[1.]
+\item La obtenci\'{o}n de las ecuaciones de movimiento de un sistema gimbal de dos grados de libertad usando el m\'{e}todo de Newton-Euler bajo ciertas consideraciones de simetr\'{i}a en la distribuci\'{o}n de masa con respecto a los ejes principales de inercia.
+
+\item El an\'{a}lisis de las propiedades din\'{a}micas del sistema gimbal en base al modelo desarrollado y las limitaciones del mismo en los puntos singulares cercanos al cono de oclusi\'{o}n.      
+
+\item Se desarroll\'{o} el control para la estabilizaci\'{o}n de la l\'{i}nea de vista basado en la teor\'{i}a del control por modos deslizantes al considerar las perturbaciones generadas por el acoplamiento cruzado y la din\'{a}mica inercial como una sola perturbaci\'{o}n acotada y canales independientes para la elevaci\'{o}n y la elevaci\'{o}n cruzada.
+
+\item Se realiz\'{o} la simulaci\'{o}n del sistema y del control dise\~{n}ado en el entorno Simulink para el an\'{a}lisis de su respuesta ante las perturbaciones de la base.
+
+\item Se present\'{o} la comparaci\'{o}n del algoritmo de estabilizaci\'{o}n dise\~{n}ado con un compensador proporcional-integral com\'{u}nmente usado para el control de este tipo de sistemas y se realizaron simulaciones de ambos algoritmos para obtener datos cuantitativos del desempe\~{n}o del control dise\~{n}ado.
+
+\item Se realiz\'{o} el dise\~{n}o detallado en 3D del prototipo en el programa SolidWorks. Este modelo permiti\'{o} obtener los par\'{a}metros inerciales para la simulaci\'{o}n.
+
+\item Se realiz\'{o} la construcci\'{o}n y programaci\'{o}n del prototipo y se obtuvieron resultados de la implementaci\'{o}n por medio de experimentaci\'{o}n en tierra del algoritmo dise\~{n}ado y del compensador proporcional-integral. 
+
+\end{enumerate}   
+
+Podemos concluir en lo referente al modelado, que si bien el modelo obtenido no coincide perfectamente con el comportamiento del gimbal real, es suficiente para el dise\~{n}o de algoritmos de control. 
+
+Por otro lado se logr\'{o} el objetivo de dise\~{n}ar y construir un prototipo funcional que sirva para desarrollar futuras investigaciones en el Instituto de Investigaci\'{o}n y desarrollo Tecnol\'{o}gico de la Armada de M\'{e}xico (INIDETAM) sobre este tipo de sistemas con el objetivo de que en un futuro se pueda eliminar la dependencia tecnol\'{o}gica nacional que actualmente se tiene para la aplicaci\'{o}n de los sistemas de giroestabilizaci\'{o}n inercial de c\'{a}mara.
+\newpage
+
+\section{Trabajo Futuro}
+
+La investigaci\'{o}n desarrollada y documentada en \'{e}sta tesis, provee las bases para la realizaci\'{o}n de posteriores investigaciones y trabajos futuros sobre el sistema gimbal. algunos de los aspectos en los que podr\'{i}a desarrollarse una mejora incluyen:
+
+\begin{enumerate}[1.]
+\item En la parte te\'{o}rica del modelado, podr\'{i}a desarrollarse un modelo m\'{a}s aproximado a la situaci\'{o}n real del sistema, en el que se consideren las masas no balanceadas y adem\'{a}s desarrollar el modelo de la cinem\'{a}tica inversa del sistema. Por otra parte, Los problemas relacionados con los puntos singulares como el cono de oclusi\'{o}n descrito en la secci\'{o}n ~\ref{sec:propiedadessist} podr\'{i}an eliminarse al realizar un algoritmo basado en cuaterniones, como en se realiza en \cite{7}.
+
+\item El uso de algoritmos de seguimiento de objetivos es una de las aplicaciones m\'{a}s importantes de este tipo de sistemas, por lo que el siguiente paso l\'{o}gico a seguir en el desarrollo de esta investigaci\'{o}n ser\'{i}a el a\~{n}adir capacidades de seguimiento de objetivo al prototipo. Existen investigaciones interesantes en este campo como en \cite{27} el cual consiste en un sistema de zoom activo que ayuda a mejorar las capacidades del sistema de seguimiento.
+
+\item En el \'{a}rea del control podr\'{i}an desarrollarse m\'{a}s esfuerzos en la s\'{i}ntesis de algoritmos avanzados de control como los tratados en las referencias \cite{15}-\cite{18} adem\'{a}s de la aplicaci\'{o}n de observadores para la estimaci\'{o}n del par generado por la fricci\'{o}n \cite{10}, \cite{11} la cual es una de las principales fuentes de perturbaci\'{o}n en el sistema.    
+
+\item El desarrollo de un prototipo considerando la simetr\'{i}a de masas al buscar balancear los eslabones para que el eje de rotaci\'{o}n coincida con eje principal de inercia para poder disminuir al m\'{a}ximo las perturbaciones inerciales y mejorar significativamente la estabilizaci\'{o}n.
+
+\item La programaci\'{o}n es una de las mayores \'{a}reas en las que el sistema puede mejorarse pues a\'{u}n es necesario realizar la integraci\'{o}n del sistema gimbal en el aeronave por lo que es necesaria la implementaci\'{o}n de un protocolo de comunicaciones CAN que proporcione un control sobre todos los subsistemas del prototipo. 
+
+\item Actualmente existe una tendencia a usar motores del tipo brushless, es decir sin exscobillas para la actuaci\'{o}n de sistemas de estabilizaci\'{o}n de c\'{a}mara por lo que podr\'{i}a estudiarse las posibles ventajas de usar este tipo de motores en el prototipo o en un futuro desarrollo. 
+
+\item Los sistemas comerciales m\'{a}s avanzados incluyen funcionalidades de seguimiento por coordenadas GPS, por lo que es una de las \'{a}reas en las que es necesaria una investigaci\'{o}n m\'{a}s profunda para poder a\~{n}adir estas capacidades al sistema desarrollado. 
+\end{enumerate}  
+
