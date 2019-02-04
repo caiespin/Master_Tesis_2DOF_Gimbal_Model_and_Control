@@ -1,7 +1,7 @@
 # Master_Tesis_2DOF_Gimbal_Model_and_Control
 Modelling and control of a two axis camera Pan-Tilt unit (gimbal)
 
-##Simulations
+**Simulations**
 
 To visualize the simulation graphs:
 
@@ -9,10 +9,10 @@ To visualize the simulation graphs:
 2. Run each model ControlCSM.slx, ControlCSMSW.slx, ControlPI.slx and ControlSM.slx
 3. Run GenerateGraphs.m
 
-##dsPIC Implementation
+**dsPIC Implementation**
 
 Needed MPLAB Device Blocks for Simulink
 
-##LaTex Document
+**LaTex Document**
 
 Thesis Document
