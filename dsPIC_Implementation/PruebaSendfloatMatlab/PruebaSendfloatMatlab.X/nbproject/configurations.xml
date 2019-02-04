@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+				   <itemPath>src/PruebaSendfloatMatlab.h</itemPath>
+<itemPath>src/PruebaSendfloatMatlab_private.h</itemPath>
+<itemPath>src/PruebaSendfloatMatlab_types.h</itemPath>
+
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="Library Files"
+                   projectFiles="true">
+				   <itemPath>C:/PROGRA~2/MICROC~1/xc16/v1.24/lib/dsPIC33F/libp33FJ128MC804-elf.a</itemPath>
+<itemPath>C:/PROGRA~2/MICROC~1/xc16/v1.24/lib/libpic30-elf.a</itemPath>
+<itemPath>C:/PROGRA~2/MICROC~1/xc16/v1.24/lib/libm-elf.a</itemPath>
+<itemPath>C:/PROGRA~2/MICROC~1/xc16/v1.24/lib/libc-elf.a</itemPath>
+<itemPath>C:/PROGRA~2/MICROC~1/xc16/v1.24/lib/libq-elf.a</itemPath>
+<itemPath>C:/PROGRA~2/MICROC~1/xc16/v1.24/lib/libq-dsp-elf.a</itemPath>
+
+    </logicalFolder>
+    <logicalFolder name="LinkerFiles"
+                   displayName="Linker Files"
+                   projectFiles="true">
+				   
+    </logicalFolder>
+    <logicalFolder name="ObjectFiles"
+                   displayName="Object Files"
+                   projectFiles="true">
+				   
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+				   <itemPath>src/PruebaSendfloatMatlab.c</itemPath>
+<itemPath>src/MCHP_UART1_Interrupt.c</itemPath>
+<itemPath>src/PruebaSendfloatMatlab_main.c</itemPath>
+<itemPath>../Source/sendfloat.c</itemPath>
+
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+				   
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>dsPIC33FJ128MC804</targetDevice>
+        <targetHeader></targetHeader>
+        <platformTool>ICD3PlatformTool</platformTool>
+        <languageToolchain>XC16</languageToolchain>
+        <languageToolchainVersion>1.24</languageToolchainVersion>
+        <platform>4</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <C30>
+        <property key="extra-include-directories" value=";PruebaSendfloatMatlab.X/src;.;src;..;../Source;C:/PROGRA~2/MICROC~1/xc16/v1.24/include;C:/PROGRA~2/MICROC~1/xc16/v1.24/support/dsPIC33F/h;C:/PROGRA~2/MICROC~1/xc16/v1.24/support/generic/h;C:/PROGRA~2/MICROC~1/xc16/v1.24/support/PERIPH~2;C:/Program Files/MATLAB/R2013b/simulink/include;C:/Program Files/MATLAB/R2013b/extern/include;C:/Program Files/MATLAB/R2013b/rtw/c/src;C:/Program Files/MATLAB/R2013b/rtw/c/ert;C:/Program Files/MATLAB/R2013b/rtw/c/src/ext_mode/common;C:/Program Files/MATLAB/R2013b/rtw/c/src/ext_mode/custom;C:/Program Files/MATLAB/R2013b/simulink/src"/>
+        <property key="optimization-level" value="-O0 -fschedule-insns -fschedule-insns2"/>
+      </C30>
+      <C30-AS>
+      </C30-AS>
+      <C30-LD>
+		<property key="extra-lib-directories" value=";PruebaSendfloatMatlab.X/src;.;src;..;../Source;C:/PROGRA~2/MICROC~1/xc16/v1.24/include;C:/PROGRA~2/MICROC~1/xc16/v1.24/support/dsPIC33F/h;C:/PROGRA~2/MICROC~1/xc16/v1.24/support/generic/h;C:/PROGRA~2/MICROC~1/xc16/v1.24/support/PERIPH~2;C:/Program Files/MATLAB/R2013b/simulink/include;C:/Program Files/MATLAB/R2013b/extern/include;C:/Program Files/MATLAB/R2013b/rtw/c/src;C:/Program Files/MATLAB/R2013b/rtw/c/ert;C:/Program Files/MATLAB/R2013b/rtw/c/src/ext_mode/common;C:/Program Files/MATLAB/R2013b/rtw/c/src/ext_mode/custom;C:/Program Files/MATLAB/R2013b/simulink/src"/>
+      </C30-LD>
+      <C30Global>
+      </C30Global>
+      <ICD3PlatformTool>
+      </ICD3PlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>
